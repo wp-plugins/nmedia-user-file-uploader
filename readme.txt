@@ -23,7 +23,7 @@ This plugin lets the wordpress site users to upload files and then can download.
 	<li>Customized Upload Message, Delete Message</li>
 </ol>
 
-username: test
+username: test<br>
 password: password
 <a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a>
 == Installation ==
@@ -39,8 +39,8 @@ password: password
 Yes you can.
 
 = Can I see its working Demo? =
-Yes, http://www.najeebmedia.com/nmedia-file-uploader-plugin/
-username: test
+Yes, http://www.najeebmedia.com/nmedia-file-uploader-plugin/<br>
+username: test<br>
 password: password
 
 
