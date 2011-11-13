@@ -6,7 +6,7 @@ Requires at least: 3.2.1
 Tested up to: 3.1.0
 Stable tag: 1.0
 
-Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files. Users can see all uploaded files and also can download it or delete these files. All is done using a simple short code: [nm-wp-file-uploader] 
+Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files.
 
 
 == Description ==
