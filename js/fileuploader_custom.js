@@ -78,6 +78,7 @@ function callUploadify(pluginURL, uploadPath)
 	'onComplete'  : function(event, ID, fileObj, response, data) {
       //alert('There are ' + fileObj.name);
 	  jQuery("#file-name").attr("value", fileObj.name);
+	  jQuery("#upload-response").html(fileObj.name + ' loaded, Please now click \'Upload\' to upload the file').fadeIn(200);
     }
   });
 }
