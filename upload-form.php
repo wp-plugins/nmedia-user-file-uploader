@@ -49,6 +49,7 @@ $arrFiles = nmFileUploader::getUserFiles();
     <td>File upload:</td>
     <td>
     <input id="file_upload" name="file_upload" type="file" />
+    <span id="upload-response" style="display:none"></span>
     </td>
   </tr>
   <tr>
