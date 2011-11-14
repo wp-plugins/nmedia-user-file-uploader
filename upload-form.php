@@ -86,7 +86,7 @@ $arrFiles = nmFileUploader::getUserFiles();
 <tbody>
 <?php foreach($arrFiles as $file):
 //print_r(parse_url($_SERVER['HTTP_REFERER']));
-$urlQuertyString = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_QUERY);
+$urlQuertyString = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
 
 if($urlQuertyString == '')
 	$urlDelete = str_replace( '%7E', '~', $_SERVER['REQUEST_URI']).'?fid='.$file -> fileID;
