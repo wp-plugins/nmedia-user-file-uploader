@@ -21,6 +21,8 @@ $uploader_page_url = get_option('uploader_page_url');
 ?>
 
 <h1>Nmedia User Files Manager Plugin</h1>
+<iframe src="//www.facebook.com/plugins/like.php?href=http://www.najeebmedia.com/nmedia-user-file-uploader-plugin/&amp;send=false&amp;layout=standard&amp;width=350&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35&amp;appId=283225211712454" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:35px;" allowTransparency="true"></iframe>
+
 <div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:800px">
 <h3>Use following Shortcode in page</h3>
 [nm-wp-file-uploader]
@@ -68,14 +70,23 @@ $uploader_page_url = get_option('uploader_page_url');
 <br /><br />
 
 <div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:800px">
-<h2>See Users Files (Pro Feature for only $25 USD)</h2>
+<h2>See Users Files (Pro Feature for only <span style="text-decoration:line-through">$25 USD</span>, <span style="text-decoration:blink">ONLY $15 USD Until 25th December</span>)</h2>
 This is Pro Feature, to get this featured enabled please contact me at <a href="mailto:ceo@najeebmedia.com">ceo@najeebmedia.com</a> with Subject: &quot;Need Pro Version&quot;. You can see screenshot of this feature by click below link.<br />
 
 	<a href="http://www.najeebmedia.com/pro-feature/" target="_blank">Users Files (A Pro Feature)</a>
 </div>
+<br />
 
+<h2>Donation</h2>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="FSTT6UVR5KFN6">
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
 <br />
 <br />
+
 
 <a href="http://www.najeebmedia.com/"><img src="http://www.najeebmedia.com/logo.png" alt="Nmedia Logo" border="0" width="175" /></a>
 <p>

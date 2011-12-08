@@ -3,7 +3,7 @@
 Plugin Name: Nmedia File Uploader Plugin
 Plugin URI: http://www.najeebmedia.com
 Description: This Plugin is developed by NajeebMedia.com
-Version: 1.1
+Version: 1.2
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
@@ -54,7 +54,11 @@ class nmFileUploader {
 		
 		
 		if ( is_user_logged_in() ) { 
-			nmFileUploader::renderForm();
+			ob_start();
+	         nmFileUploader::renderForm();
+			$output_string = ob_get_contents();
+			ob_end_clean();
+			return $output_string;
 		}
 		else
 		{

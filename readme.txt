@@ -5,6 +5,7 @@ Tags: File uploader, User files, User files manager, File uploaders, User Desgin
 Requires at least: 3.2.1
 Tested up to: 3.1.0
 Stable tag: 1.1
+Stable tag: 1.2
 
 Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files.
 
@@ -23,9 +24,10 @@ This plugin lets the wordpress site users to upload files and then can download.
 	<li>Customized Upload Message, Delete Message</li>
 </ol>
 
+<a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a><br>
 username: test<br>
 password: password
-<a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a>
+
 == Installation ==
 
 1. Upload plugin directory to the `/wp-content/plugins/` directory
@@ -62,6 +64,9 @@ Yes nice progressbar with percentage
 = 1.1 =
 * Just fixed the delete file bug.
 
+= 1.2 =
+* Fixed content placement issue when using shortcode in middle of post/page.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -69,6 +74,9 @@ Nothing for now.
 
 = 1.1 =
 Update to this version, Delete File issue is just fixed.
+
+= 1.2 =
+Update to this version, Content Placement issue is being fixed
 
 
 1. It is very light plugin
