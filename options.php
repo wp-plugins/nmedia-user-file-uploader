@@ -21,7 +21,7 @@ $uploader_page_url = get_option('uploader_page_url');
 ?>
 
 <h1>Nmedia User Files Manager Plugin</h1>
-<iframe src="//www.facebook.com/plugins/like.php?href=http://www.najeebmedia.com/nmedia-file-uploader-plugin/&amp;send=false&amp;layout=standard&amp;width=350&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35&amp;appId=283225211712454" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:35px;" allowTransparency="true"></iframe>
+<iframe src="//www.facebook.com/plugins/like.php?href=http://www.najeebmedia.com/nmedia-user-file-uploader-plugin/&amp;send=false&amp;layout=standard&amp;width=350&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=35&amp;appId=283225211712454" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:35px;" allowTransparency="true"></iframe>
 
 <div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:800px">
 <h3>Use following Shortcode in page</h3>
