@@ -98,15 +98,15 @@ $uploads = wp_upload_dir();
 $urlDwnld = $uploads['baseurl'] . '/user_uploads/' . $file -> fileName;
 ?>
   <tr>
-    <td><?= $file -> fileName?></td>
-    <td><?= $file -> fileDescription?></td>
-    <td width="71" align="center"><?= date('d-M,y', strtotime($file -> fileUploadedOn))?></td>
+    <td><?php _e($file -> fileName)?></td>
+    <td><?php _e($file -> fileDescription)?></td>
+    <td width="71" align="center"><?php _e(date('d-M,y', strtotime($file -> fileUploadedOn)))?></td>
     <td width="97" align="center">
-    <a href="<?= $urlDwnld?>">
+    <a href="<?php _e($urlDwnld)?>">
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/down_16.png' , __FILE__)." />";	?>
     </a>
      | 
-    <a href="javascript:confirmFirst('<?= $urlDelete?>')">
+    <a href="javascript:confirmFirst('<?php _e($urlDelete)?>')">
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/delete_16.png' , __FILE__)." />";	?>
     </a></td>
   </tr>
