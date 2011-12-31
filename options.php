@@ -77,6 +77,7 @@ $uploader_page_url = get_option('uploader_page_url');
     <li>Download user files</li>
     <li>Delete user files</li>
     <li>Upload files to specific user</li>
+    <li>Email Notification whenever file is uploaded by user</li>
 </ul>
 
 <h3>To get this Feature please click link below:</h3>
