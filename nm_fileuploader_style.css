@@ -71,6 +71,13 @@ table#user-files thead
 	color:#00F;
 }
 
+.nm-file-uploader-button
+{
+	background-color:#999;
+	padding:5px;
+	border:#333 1px solid;
+}
+
 
 .green
 {

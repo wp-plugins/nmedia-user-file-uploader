@@ -59,7 +59,7 @@ $arrFiles = nmFileUploader::getUserFiles();
   <tr>
     <td>&nbsp;</td>
     <td>
-						<div class="dlg_change_indicator_button"><input type="submit" value="Upload" name="submit" onclick="dlg_change_indicator()" id="nm-upload"></div>
+						<div class="dlg_change_indicator_button"><input type="submit" value="Upload" name="submit" onclick="dlg_change_indicator()" id="nm-upload" class="nm-file-uploader-button"></div>
 						<div id="working-area" style="display:none">
                         <?php
 							echo "<img src=".plugins_url( 'images/loading.gif' , __FILE__)." />";

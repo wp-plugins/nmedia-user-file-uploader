@@ -71,7 +71,7 @@ $uploader_page_url = get_option('uploader_page_url');
 
 <div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:800px">
 <h2>Being Admin, see files of all users</h2>
-<h3>(Pro Feature for only <span style="text-decoration:line-through">$25 USD</span>, <span style="text-decoration:blink">ONLY $15 USD Until 25th December</span>)</h3>
+<h3>(Pro Feature for only $19 USD)</h3>
 <ul>
 	<li>See users files under their profile in admin</li>
     <li>Download user files</li>
@@ -79,12 +79,9 @@ $uploader_page_url = get_option('uploader_page_url');
     <li>Upload files to specific user</li>
 </ul>
 
-<h3>To get this Feature</h3>
-<p>Contact here <a href="mailto:ceo@najeebmedia.com">ceo@najeebmedia.com</a> with Subject: &quot;Need Pro Version&quot;. </p>
-<p><br />
-  
-  You can see screenshot of this feature by click below link.<br />
-  <a href="http://www.najeebmedia.com/pro-feature/" target="_blank">Users Files (A Pro Feature)</a></p>
+<h3>To get this Feature please click link below:</h3>
+<p>
+<a href="http://www.najeebmedia.com/pro-feature/" target="_blank">Users Files (A Pro Feature)</a></p>
 </div>
 <br />
 
