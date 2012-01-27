@@ -282,7 +282,7 @@ function load_fileuploader_script() {
 	wp_enqueue_script('uploadify_script');
 	
 	
-     wp_register_script( 'fileuploader_custom_script', plugins_url('js/fileuploader_custom.js', __FILE__), 'uploadify_script');
+     wp_register_script( 'fileuploader_custom_script', plugins_url('js/fileuploader_custom.js', __FILE__), array('uploadify_script'));
 	 wp_enqueue_script('fileuploader_custom_script');
 	 
 	 //fancy box
