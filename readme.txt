@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader
 Requires at least: 3.2.1
 Tested up to: 3.3
-Stable tag: 1.4
+Stable tag: 1.5
 
 Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files.
 
@@ -72,6 +72,11 @@ Yes nice progressbar with percentage
 = 1.4 =
 * Change the Upload File button 
 
+= 1.5 = 
+* Physical file deleted from folder
+* Every user will have its own upload directory as `user_name`
+* File Name field is removed
+
 
 == Upgrade Notice ==
 
@@ -89,6 +94,9 @@ Fixed the bug for php short code
 
 = 1.4 =
 Wrapped up the Upload File Button with some CSS.
+
+= 1.5 =
+This plugin has three major changes, please update to get these.
 
 
 
