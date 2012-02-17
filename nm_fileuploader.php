@@ -241,7 +241,7 @@ class nmFileUploader {
 		//echo "hello";
 		global $wpdb;
 		
-		if($_REQUEST['user_id'] != '')
+		if(@$_REQUEST['user_id'] != '')
 		{
 			$userID = $_REQUEST['user_id'];
 		}
