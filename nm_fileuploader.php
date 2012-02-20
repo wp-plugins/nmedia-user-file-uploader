@@ -151,33 +151,6 @@ class nmFileUploader {
 	
 
   
-  public function set_up_admin_page () {
-	
-	add_menu_page(	'FileUploader', 
-					'NM FileUploader', 
-					'manage_options', 
-					'nmuploader-settings', 
-					array('nmFileUploader', 'show_admin_options'),
-					'',
-					4);
-	
-	/*add_submenu_page( 'nmuploader-settings',
-					  'Settings', 
-					  'Settings', 
-					  'manage_options', 
-					  'upload-files', 
-					  array('nmFileUploader', 'setting_main_page'));*/
-  	
-	}
-	
-	
-	public function show_admin_options()
-	{
-		$file = dirname(__FILE__).'/options.php';
-		include($file);
-	}
-	
-	
   
 	public function saveFile()
 	{
@@ -281,7 +254,6 @@ class nmFileUploader {
 
 register_activation_hook(__FILE__, array('nmFileUploader','fileuploader_install'));
 
-add_action('admin_menu', array('nmFileUploader', 'set_up_admin_page'));
 
 
 
@@ -324,5 +296,9 @@ function nm_fileuploader_style() {
 	wp_register_style('plugin_fileuploader_stylesheet', plugins_url('nm_fileuploader_style.css', __FILE__));
     wp_enqueue_style( 'plugin_fileuploader_stylesheet');        
 }
+
+$options_file = dirname(__FILE__).'/file-upload-options.php';
+include ($options_file);
+
 
 ?>
