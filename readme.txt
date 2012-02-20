@@ -27,6 +27,20 @@ This plugin lets the wordpress site users to upload files and then can download.
 username: test<br>
 password: password
 
+<h2>Need EXTRA Conrol Like:</h2>
+<ul style="list-style:inside">
+	<li>Admin can upload files for Roles or Public</li>
+    <li><strong>multi</strong>: multiple upload</li>	
+    <li><strong>file_limit</strong>: control file limits</li>
+    <li><strong>file_ext</strong>: restrict file extension</li>
+    <li><strong>allow_delete</strong>: switch on/off delete control</li>
+    <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
+    <li><strong>display_files</strong>: show/hide files</li>
+    <li><strong>is_public</strong>: allow all users to see uploaded files</li>
+</ul>
+
+Get PRO Version for Just $19.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Detail and Purchase Here</a>
+
 == Installation ==
 
 1. Upload plugin directory to the `/wp-content/plugins/` directory
