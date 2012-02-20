@@ -27,7 +27,7 @@ This plugin lets the wordpress site users to upload files and then can download.
 username: test<br>
 password: password
 
-<h2>Need EXTRA Conrol Like:</h2>
+<h2>PRO Version Gives EXTRA Conrol Like:</h2>
 <ul style="list-style:inside">
 	<li>Admin can upload files for Roles or Public</li>
     <li><strong>multi</strong>: multiple upload</li>	
