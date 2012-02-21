@@ -113,7 +113,7 @@ function nm_file_admin() {
     <li><strong>is_public</strong>: allow all users to see uploaded files</li>
 </ul>
 
-Get PRO Version for Just $19.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Detail and Purchase Here</a>
+Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Detail and Purchase Here</a>
 </div>
 <br />
 <form method="post">

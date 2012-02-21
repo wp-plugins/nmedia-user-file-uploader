@@ -3,7 +3,7 @@
 
 <!-- Nmedia client File Uploader Plugin -->
 <div class="box">
-<h2>Pro Features</h2>
+<h2>Pro Features for $20.00 USD</h2>
 <p>
 <ul style="list-style:inside">
 	<li>Admin can upload files for Roles or Public</li>
