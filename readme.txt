@@ -1,12 +1,12 @@
 === Nmedia Users File Uploader Plugin ===
 Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
-Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader
+Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
 Tested up to: 3.3
 Stable tag: 1.6
 
-Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files.
+Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files with Progress Bar.
 
 
 == Description ==
