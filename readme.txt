@@ -1,12 +1,12 @@
 === Nmedia Users File Uploader Plugin ===
 Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
-Tags: File uploader, User File Sharing, Client File Manager, Image uploader, Ajax File upload, File Manager, File Sharing
+Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader
 Requires at least: 3.2.1
 Tested up to: 3.3
 Stable tag: 1.6
 
-Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files.
+Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files with Progress Bar.
 
 
 == Description ==
@@ -26,20 +26,6 @@ This plugin lets the wordpress site users to upload files and then can download.
 <a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a><br>
 username: test<br>
 password: password
-
-<h2>PRO Version Gives EXTRA Conrol Like:</h2>
-<ul style="list-style:inside">
-	<li>Admin can upload files for Roles or Public</li>
-    <li><strong>multi</strong>: multiple upload</li>	
-    <li><strong>file_limit</strong>: control file limits</li>
-    <li><strong>file_ext</strong>: restrict file extension</li>
-    <li><strong>allow_delete</strong>: switch on/off delete control</li>
-    <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
-    <li><strong>display_files</strong>: show/hide files</li>
-    <li><strong>is_public</strong>: allow all users to see uploaded files</li>
-</ul>
-
-Get PRO Version: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Detail and Purchase Here</a>
 
 == Installation ==
 
