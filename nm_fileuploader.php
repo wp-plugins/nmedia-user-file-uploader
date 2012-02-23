@@ -14,7 +14,7 @@ error_reporting(E_ALL);*/
 
 class nmFileUploader {
 	
-	var $fileupload_db_version = "1.0";
+	var $fileupload_db_version = "1.6";
 	
 	/*
 	data vars
@@ -121,7 +121,7 @@ class nmFileUploader {
 				`fileName` VARCHAR( 250 ) NULL ,
 				`fileDescription` MEDIUMTEXT NULL ,
 				`fileType` VARCHAR( 15 ) NULL ,
-				`fileUploadedOn` DATETIME NOT NULL );";
+				`fileUploadedOn` DATETIME NOT NULL )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
 	
 	   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 	   dbDelta($sql);
