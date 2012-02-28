@@ -25,7 +25,7 @@ $wpdb->print_error(); */
 $arrFiles = nmFileUploader::getAllUserFiles();
 ?>
 <div style="margin:5px;padding:5px;border:1px solid #CCC; background-color:#f5f5f5">
-
+<h3>Total files: <?php echo count($arrFiles)?></h3>
 <div class="user-uploaded-files">
 <table width="100%" border="0" id="user-files" class="wp-list-table widefat fixed posts">
 <thead>
@@ -57,10 +57,11 @@ if(file_exists($uploads['basedir'] . '/user_uploads/'. $file -> fileName))
 else
   	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$user_info -> user_login.'/' . $file -> fileName;
 
+$urlUserProfile = admin_url( 'profile.php?user_id='.$file->userID.'#nm-uploaded-files' );
 ?>
   <tr>
     <td><?= $file -> fileName?><br />
-		uploaded by: <?php echo $user_info -> user_login?> | view all files by <a href="<?php echo admin_url( 'profile.php?user_id='.$file->userID )?>"><?php echo$user_info -> user_login?></a></td>
+		uploaded by: <?php echo $user_info -> user_login?> | view all files by <a href="<?php echo $urlUserProfile?>"><?php echo $user_info -> user_login?></a></td>
     <td><?= $file -> fileDescription?></td>
     <td width="71" align="center"><?= date('d-M,y', strtotime($file -> fileUploadedOn))?></td>
     <td width="97" align="center">

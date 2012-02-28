@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
 Tested up to: 3.3
-Stable tag: 1.6
+Stable tag: 1.7
 
 Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files with Progress Bar.
 
@@ -48,12 +48,18 @@ password: password
 = Does this uploader will show progressbar =
 Yes nice progressbar with percentage
 
+= Why I see HTTP Error message =
+it is because of your server side settings, sometime php.ini does not allow to upload big files. You need to check following two settings in php.ini:<br>
+1- post_max_size<br>
+2- upload_max_filesize
+
+
 == Screenshots ==
 
 1. Option settings under `NM FileUploader` menu
 2. using short code in page
 3. Front end view
-4. Admin area for user uploaded files [Pro Version]
+4. Admin area for user uploaded files
 
 == Changelog ==
 
@@ -80,6 +86,10 @@ Yes nice progressbar with percentage
 = 1.6 =
 * there was error sometimes when creating directory for users, not it is fixed.
 
+= 1.7 =
+* Admin can see the file uploade by users
+
+
 
 
 == Upgrade Notice ==
@@ -105,9 +115,11 @@ This plugin has three major changes, please update to get these.
 = 1.6 =
 Upload directory was not creating due to some server side settings, now it is fixed
 
+= 1.7 =
+Admin can see the file uploade by users
+
 
 
 1. It is very light plugin
 2. We are working on more plugins to get our users more excited.
 3. More options/controls will be given soon.
-

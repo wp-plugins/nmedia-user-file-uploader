@@ -3,7 +3,7 @@
 Plugin Name: Nmedia File Uploader Plugin
 Plugin URI: http://www.najeebmedia.com
 Description: This Plugin is developed by NajeebMedia.com
-Version: 1.6
+Version: 1.7
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
@@ -40,11 +40,7 @@ class nmFileUploader {
 	}
 	
 	
-	function test()
-	{
-		echo 'yes man';
-	}
-	
+
 	function renderUserArea()
 	{
 		global $wpdb ;
@@ -249,35 +245,12 @@ class nmFileUploader {
 	
 	function nm_user_upload_admin(){
 	
-	global $wpdb;
-	
-	$user_id = $_REQUEST['user_id'];
-	
-	/*if($_GET['dlg-delete-file'] != ""){
-		$wpdb->query("
-					DELETE FROM ".$wpdb->prefix."dlg_cu WHERE id = ".$_GET['dlg-delete-file']."
-					");
-	
-	}*/
+		$user_id = $_REQUEST['user_id'];
 	
 		nmFileUploader::renderListings();	
 	
-	}	
-	
-	
-	/*
-	** listing all files uploaded by users
-	*/
-	public function nm_admin_file_list() {
-	
-	add_submenu_page( 'NajeebMedia File Uploader Plugin',
-					  'Files List', 
-					  'Files List', 
-					  'manage_options', 
-					  basename(__FILE__), 
-					  array('nmFileUploader', 'listUserFiles'));
-  	
 	}
+	
 	
 	
 	/*
@@ -328,6 +301,7 @@ add_action('wp_print_styles', 'nm_fileuploader_style');
 
 //edit user action
 add_action( 'edit_user_profile', array('nmFileUploader', 'nm_user_upload_admin'));
+add_action( 'show_user_profile', array('nmFileUploader', 'nm_user_upload_admin'));
 
 
 /*

@@ -39,7 +39,7 @@ function nm_file_add_admin() {
 
     global $plugin_name, $shortname, $nm_mc_options;
 
-    if ( $_GET['page'] == basename(__FILE__) ) {
+    if ( @$_GET['page'] == basename(__FILE__) ) {
     
         if ( 'save' == $_REQUEST['action'] ) {
 
@@ -70,7 +70,7 @@ function nm_file_add_admin() {
 					  'Files List', 
 					  'Files List', 
 					  'manage_options', 
-					  basename(__FILE__), 
+					  'nm-user-files', 
 					  array('nmFileUploader', 'listUserFiles'));
 
 }

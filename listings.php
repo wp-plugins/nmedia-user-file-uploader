@@ -20,11 +20,15 @@ $wpdb->print_error(); */
 
 
 $arrFiles = nmFileUploader::getUserFiles();
-?>
-<div style="margin:5px;padding:5px;border:1px solid #CCC; background-color:#f5f5f5">
 
+$urlFilesList = admin_url( 'admin.php?page=nm-user-files');
+?>
+
+<div style="margin:5px;padding:5px;border:1px solid #CCC; background-color:#f5f5f5">
 <div class="user-uploaded-files">
-<h2>Uploaded Files</h2>
+<h2><a name="nm-uploaded-files">Uploaded Files</a></h2>
+<a href="<?php echo $urlFilesList?>">&laquo; back to list</a>
+<h3>Total files: <?php echo count($arrFiles)?></h3>
 <table width="100%" border="0" id="user-files" class="wp-list-table widefat fixed posts">
 <thead>
 	<tr>
