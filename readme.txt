@@ -41,7 +41,7 @@ Pro version gives you AWSOME control over this plugin. Like Admin can upload fil
 	<li><strong>size_limit: </strong>control file size uploaded by users</li>
 </ul>
 
-For more information please visit: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/>Pro Version</a>
+For more information please visit: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Pro Version</a>
 
 == Installation ==
 
