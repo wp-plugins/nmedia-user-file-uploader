@@ -12,7 +12,7 @@ Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your si
 == Description ==
 This plugin lets the wordpress site users to upload files and then can download. It uses flash uploader with progress bar. Users can see all uploaded files and also can download it or delete these files. All is done using a simple short code: [nm-wp-file-uploader] 
 
-<h2>Features</h2>
+<h3>Features</h3>
 <ol>
 	<li>Flash Uploader</li>
 	<li>Ajax based validation</li>
@@ -26,6 +26,22 @@ This plugin lets the wordpress site users to upload files and then can download.
 <a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a><br>
 username: test<br>
 password: password
+
+
+<h3>Pro Features</h3>
+Pro version gives you AWSOME control over this plugin. Like Admin can upload files for Roles or for Public. Also, now you can control the plugin with shortcode parameters listed below:
+<ul>
+	<li><strong>multi</strong>: multiple upload</li>
+	<li><strong>file_limit</strong>: control file limits</li>
+	<li><strong>file_ext</strong>: restrict file extension</li>
+	<li><strong>allow_delete</strong>: switch on/off delete control</li>
+	<li><strong>allow_upload</strong>: switch on/ff to upload files</li>
+	<li><strong>display_files</strong>: show/hide files</li>
+	<li><strong>is_public:</strong> allow all users to see uploaded files</li>
+	<li><strong>size_limit: </strong>control file size uploaded by users</li>
+</ul>
+
+For more information please visit: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/>Pro Version</a>
 
 == Installation ==
 
