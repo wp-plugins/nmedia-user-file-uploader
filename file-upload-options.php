@@ -1,7 +1,7 @@
 <?php
 $plugin_name = "NajeebMedia File Uploader Plugin";
 $shortname = "nm_file";
-
+$option_page_name = 'nm-file-uploader';
 
 
 // Create Plugin nm_mc_options
@@ -39,9 +39,9 @@ function nm_file_add_admin() {
 
     global $plugin_name, $shortname, $nm_mc_options;
 
-    if ( @$_GET['page'] == basename(__FILE__) ) {
+    if ( @$_GET['page'] == $option_page_name ) {
     
-        if ( 'save' == $_REQUEST['action'] ) {
+         if ( 'save' == $_REQUEST['action'] ) {
 
                 foreach ($nm_mc_options as $value) {
                     update_option( $value['id'], $_REQUEST[ $value['id'] ] ); }
@@ -49,7 +49,7 @@ function nm_file_add_admin() {
                 foreach ($nm_mc_options as $value) {
                     if( isset( $_REQUEST[ $value['id'] ] ) ) { update_option( $value['id'], $_REQUEST[ $value['id'] ]  ); } else { delete_option( $value['id'] ); } }
 
-                header("Location: plugins.php?page=file-upload-options.php&saved=true");
+                header("Location: plugins.php?page=$option_page_name&saved=true");
                 die;
 
         } else if( 'reset' == $_REQUEST['action'] ) {
@@ -57,16 +57,20 @@ function nm_file_add_admin() {
             foreach ($nm_mc_options as $value) {
                 delete_option( $value['id'] ); }
 
-            header("Location: plugins.php?page=file-upload-options.php&reset=true");
+            header("Location: plugins.php?page=$option_page_name&reset=true");
             die;
 
         } 
     }
 
-    //add_plugins_page($plugin_name." Options", "Mailchimp Options", 'edit_plugins', basename(__FILE__), 'nm_file_admin');
-	add_menu_page($plugin_name, "Nmedia File Upload", 'edit_plugins', 'nm-file-uploader', 'nm_file_admin', plugin_dir_url(__FILE__ ).'images/option.png');
+   add_menu_page($plugin_name, 
+  				"Nmedia File Upload", 
+				'edit_plugins', 
+				$option_page_name, 
+				'nm_file_admin', 
+				plugin_dir_url(__FILE__ ).'images/option.png');
 	
-	add_submenu_page( 'nm-file-uploader',
+	add_submenu_page( $option_page_name,
 					  'Files List', 
 					  'Files List', 
 					  'manage_options', 
