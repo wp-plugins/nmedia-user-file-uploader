@@ -14,29 +14,40 @@
     <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
     <li><strong>display_files</strong>: show/hide files</li>
     <li><strong>is_public</strong>: allow all users to see uploaded files</li>
+    <li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
 </ul>
-<a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">How to use Shortcodes?</a>
+<a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">How to use Shortcodes?</a>
 </p>
 </div>
 
 
 <!-- Like us -->
 <div class="box">
-<h2>In LAB</h2>
-<h3>Private Conversation System</h3>
-<p>
-NMedia is busy in developing another great plugin, the Private Conversation System. It is totally ajax based solution to allow your wordpress site users to communicate to each others. It will be launched by next week. If you want to get inform about this please subscribe to following link:<br /><a href="http://eepurl.com/jm1V1">Subscribe to get alert</a>
-</p>
-</div>
+<h2>WP Member Private Conversation/Messaging Plugin</h2>
+<h3> NMedia WordPress Member Conversation plugin is launched.<br />
+</h3>
+<ul>
+  <li>Ajax based conversation</li>
+  <li>New conversation notification</li>
+  <li>All conversations list in admin</li>
+  <li>Autocomplete users list</li>
+</ul>
+<a href="http://www.najeebmedia.com/wp-conversation-plugin/">Download your copy</a></div>
 
 
 
 <!-- Like us -->
 <div class="box">
-<h2>LIKE us?</h2>
+<h2>FOLLOW us, LIKE us :-) </h2>
 
 <div id="social">
-<iframe src="//www.facebook.com/plugins/like.php?href=https://www.facebook.com/pages/Nmedia/191722830857549&amp;send=false&amp;layout=box_count&amp;width=50&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90&amp;appId=218026514894348" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;text-align:center" allowTransparency="true"></iframe>
+<a href="https://twitter.com/nmedia82" class="twitter-follow-button" data-show-count="true" data-count="horizontal">Follow @nmedia82</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<br />
+
+<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FNmedia%2F191722830857549&amp;width=292&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=262696150470787" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:258px;" allowTransparency="true"></iframe>
+
 </div>
 </div>
 

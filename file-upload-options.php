@@ -115,6 +115,7 @@ function nm_file_admin() {
 <h2>Need EXTRA Conrol Like:</h2>
 <ul style="list-style:inside">
 	<li>Admin can upload files for Roles or Public</li>
+    <li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
     <li><strong>multi</strong>: multiple upload</li>	
     <li><strong>file_limit</strong>: control file limits</li>
     <li><strong>file_ext</strong>: restrict file extension</li>
@@ -124,7 +125,7 @@ function nm_file_admin() {
     <li><strong>is_public</strong>: allow all users to see uploaded files</li>
 </ul>
 
-Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Detail and Purchase Here</a>
+Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
 </div>
 <br />
 <form method="post">
