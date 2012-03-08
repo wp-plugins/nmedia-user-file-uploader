@@ -38,7 +38,7 @@ Pro version gives you AWSOME control over this plugin. Like Admin can upload fil
 	<li><strong>allow_upload</strong>: switch on/ff to upload files</li>
 	<li><strong>display_files</strong>: show/hide files</li>
 	<li><strong>is_public:</strong> allow all users to see uploaded files</li>
-	<li><strong>size_limit: </strong>control file size uploaded by users</li>
+	<li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
 </ul>
 
 For more information please visit: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Pro Version</a>
