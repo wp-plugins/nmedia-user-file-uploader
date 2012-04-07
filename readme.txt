@@ -105,6 +105,10 @@ it is because of your server side settings, sometime php.ini does not allow to u
 = 1.7 =
 * Admin can see the file uploade by users
 
+= 1.8 =
+* Some major security issues is being fixed, please update to this version
+
+
 
 
 
@@ -133,6 +137,10 @@ Upload directory was not creating due to some server side settings, now it is fi
 
 = 1.7 =
 Admin can see the file uploade by users
+
+= 1.8 =
+Some major security issues is being fixed, please update to this version
+
 
 
 
