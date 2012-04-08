@@ -16,13 +16,15 @@ jQuery(function(){
 /*
 uploadify
 */
-function callUploadify(pluginURL, uploadPath)
+function callUploadify(pluginURL, userName)
 {
+	var user_name = "/"+userName;
+	
 	jQuery('#file_upload').uploadify({
     'uploader'  : pluginURL + '/js/uploadify/uploadify.swf',
     'script'    : pluginURL + '/doupload.php',
     'cancelImg' : pluginURL + '/js/uploadify/cancel.png',
-    'plugin_url': pluginURL,
+    'folder' : 	user_name,
     'auto'      : true,
 	'onComplete'  : function(event, ID, fileObj, response, data) {
       //alert('There are ' + fileObj.name);

@@ -96,14 +96,14 @@ $uploads = wp_upload_dir();
 if($file -> fileFor == 0)
 {
 	$bg_color = '';
-	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$current_user -> user_nicename.'/' . $file -> fileName;
+	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$current_user -> user_login.'/' . $file -> fileName;
 }
 else
 {
 	//it is uploaded by admin for this user
 	$user_info = get_userdata($file -> userID);
 	$bg_color = '#33CC00';
-	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$user_info -> user_nicename.'/' . $file -> fileName;
+	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$user_info -> user_login.'/' . $file -> fileName;
 	$urlDelete = "0";
 }
 
@@ -138,6 +138,6 @@ if(file_exists($uploads['basedir'] . '/user_uploads/'. $file -> fileName))
 <script type="text/javascript">
 	
 	//uploadify
-	callUploadify('<?php echo plugins_url('', __FILE__);?>', '<?php echo nmFileUploader::$pathUploads?>');
+	callUploadify('<?php echo plugins_url('', __FILE__);?>', '<?php echo $current_user -> user_login?>');
 
 </script>
