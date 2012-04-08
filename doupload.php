@@ -17,7 +17,7 @@ else
 global $current_user;
 
 $upload_dir = wp_upload_dir();
-$path_folder = $upload_dir['basedir'].'/user_uploads/'.$current_user -> user_nicename.'/';
+$path_folder = $upload_dir['basedir'].'/user_uploads/'.$current_user -> user_login.'/';
 
 		
 
