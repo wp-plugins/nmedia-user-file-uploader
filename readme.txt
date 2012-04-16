@@ -23,10 +23,7 @@ This plugin lets the wordpress site users to upload files and then can download.
 	<li>Customized Upload Message, Delete Message</li>
 </ol>
 
-<a href="http://www.najeebmedia.com/nmedia-file-uploader-plugin/">View Demo</a><br>
-username: test<br>
-password: password
-
+<a href="http://www.najeebmedia.com/n-media-file-uploader-plugin-pro-demo/">View Demo</a>
 
 <h3>Pro Features</h3>
 Pro version gives you AWSOME control over this plugin. Like Admin can upload files for Roles or for Public. Also, now you can control the plugin with shortcode parameters listed below:
