@@ -1,14 +1,14 @@
 <?php
-$plugin_name = "NajeebMedia File Uploader Plugin";
-$shortname = "nm_file";
-$option_page_name = 'nm-file-uploader';
+$nmf_name = "NajeebMedia File Uploader Plugin";
+$nmf_shortname = "nm_file";
+$nmf_page_name = 'nm-file-uploader';
 
 
-// Create Plugin nm_mc_options
+// Create Plugin nmf_options
 
-$nm_mc_options = array (
+$nmf_options = array (
 
-array( "name" => $plugin_name." Options",
+array( "name" => $nmf_name." Options",
 	"type" => "title"),
 
 array( 	"name" => __("General Settings", "nm_file_uploader_pro"),	
@@ -18,59 +18,59 @@ array( 	"name" => __("General Settings", "nm_file_uploader_pro"),
 		
 		array( 	"name" => __("Sent Message", "nm_file_uploader_pro"),
 		  		"desc" => __("Type a message here, it will be shown when user will submit the file", "nm_file_uploader_pro"),
-				"id" => $shortname."_uploaded_msg",
+				"id" => $nmf_shortname."_uploaded_msg",
 				"type" => "textarea",
 				"std" => ""),
 		
 		array( 	"name" => __("Delete Message", "nm_file_uploader_pro"),
 		  		"desc" => __("Type a message here, it will be shown when user will delete the file", "nm_file_uploader_pro"),
-				"id" => $shortname."_deleted_msg",
+				"id" => $nmf_shortname."_deleted_msg",
 				"type" => "textarea",
 				"std" => ""),	
 		
 		
 		array( "type" => "close"),
 
-);	//end of nm_mc_options array
+);	//end of nmf_options array
 											
 											
 
 function nm_file_add_admin() {
 
-    global $plugin_name, $shortname, $nm_mc_options;
+    global $nmf_name, $nmf_shortname, $nmf_options;
 
-    if ( @$_GET['page'] == $option_page_name ) {
+    if ( @$_GET['page'] == $nmf_page_name ) {
     
          if ( 'save' == $_REQUEST['action'] ) {
 
-                foreach ($nm_mc_options as $value) {
+                foreach ($nmf_options as $value) {
                     update_option( $value['id'], $_REQUEST[ $value['id'] ] ); }
 
-                foreach ($nm_mc_options as $value) {
+                foreach ($nmf_options as $value) {
                     if( isset( $_REQUEST[ $value['id'] ] ) ) { update_option( $value['id'], $_REQUEST[ $value['id'] ]  ); } else { delete_option( $value['id'] ); } }
 
-                header("Location: plugins.php?page=$option_page_name&saved=true");
+                header("Location: plugins.php?page=$nmf_page_name&saved=true");
                 die;
 
         } else if( 'reset' == $_REQUEST['action'] ) {
 
-            foreach ($nm_mc_options as $value) {
+            foreach ($nmf_options as $value) {
                 delete_option( $value['id'] ); }
 
-            header("Location: plugins.php?page=$option_page_name&reset=true");
+            header("Location: plugins.php?page=$nmf_page_name&reset=true");
             die;
 
         } 
     }
 
-   add_menu_page($plugin_name, 
+   add_menu_page($nmf_name, 
   				"Nmedia File Upload", 
 				'edit_plugins', 
-				$option_page_name, 
+				$nmf_page_name, 
 				'nm_file_admin', 
 				plugin_dir_url(__FILE__ ).'images/option.png');
 	
-	add_submenu_page( $option_page_name,
+	add_submenu_page( $nmf_page_name,
 					  'Files List', 
 					  'Files List', 
 					  'manage_options', 
@@ -81,27 +81,27 @@ function nm_file_add_admin() {
 
 
 function nm_file_add_init() {
-  	wp_register_style('nm_plugin_option_style', plugins_url('options.css', __FILE__));
-	wp_enqueue_style( 'nm_plugin_option_style');
+  	wp_register_style('nmf_option_style', plugins_url('options.css', __FILE__));
+	wp_enqueue_style( 'nmf_option_style');
 	
-	wp_enqueue_script("nm_plugin_script", plugins_url('js/nm_plugin_option.js', __FILE__), false, "1.0"); 
+	wp_enqueue_script("nmf_script", plugins_url('js/nm_plugin_option.js', __FILE__), false, "1.0"); 
 	
 }
 
 
 function nm_file_admin() {
 
-    global $plugin_name, $shortname, $nm_mc_options, $nm_bgs;
-	//print_r($nm_mc_options);
+    global $nmf_name, $nmf_shortname, $nmf_options, $nm_bgs;
+	//print_r($nmf_options);
 	
 
-    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$plugin_name.' '.__('Settings saved.','nm_file_uploader_pro').'</strong></p></div>';
-    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$plugin_name.' '.__('Settings reset.','nm_file_uploader_pro').'</strong></p></div>';
-    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$plugin_name.' '.__('Widgets reset.','nm_file_uploader_pro').'</strong></p></div>';
+    if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$nmf_name.' '.__('Settings saved.','nm_file_uploader_pro').'</strong></p></div>';
+    if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$nmf_name.' '.__('Settings reset.','nm_file_uploader_pro').'</strong></p></div>';
+    if ( $_REQUEST['reset_widgets'] ) echo '<div id="message" class="updated fade"><p><strong>'.$nmf_name.' '.__('Widgets reset.','nm_file_uploader_pro').'</strong></p></div>';
     
 ?>
 <div class="wrap rm_wrap">
-<h2><?php echo $plugin_name; ?> Settings</h2>
+<h2><?php echo $nmf_name; ?> Settings</h2>
 
 
 <div class="rm_opts">
@@ -130,7 +130,7 @@ Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-
 <br />
 <form method="post">
 
-<?php foreach ($nm_mc_options as $value) {
+<?php foreach ($nmf_options as $value) {
 switch ( $value['type'] ) {
 
 case "open":
@@ -247,7 +247,7 @@ case 'select':
 	<label for="<?php echo $value['id']; ?>"><?php _e($value['name'], 'nm_file_uploader_pro') ?></label>
 
 <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-<?php foreach ($value['nm_mc_options'] as $option) { ?>
+<?php foreach ($value['nmf_options'] as $option) { ?>
 		<option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?>
 </select>
 
