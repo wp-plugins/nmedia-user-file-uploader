@@ -5,6 +5,8 @@ Tags: File uploader, User files, User files manager, File uploaders, User Desgin
 Requires at least: 3.2.1
 Tested up to: 3.3
 Stable tag: 1.8
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files with Progress Bar.
 
