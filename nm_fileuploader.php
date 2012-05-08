@@ -275,9 +275,11 @@ register_activation_hook(__FILE__, array('nmFileUploader','fileuploader_install'
 
 
 function load_fileuploader_script() {
-	wp_deregister_script( 'jquery' );
+	/*wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', plugins_url('js/jquery-1.4.4.min.js', __FILE__));
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery' );*/
+	
+	wp_enqueue_script("jquery");
 	
 	wp_register_script('swfobject_script', plugins_url('js/uploadify/swfobject.js', __FILE__));
 	wp_enqueue_script('swfobject_script');
