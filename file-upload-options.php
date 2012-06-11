@@ -125,6 +125,8 @@ function nm_file_admin() {
     <li><strong>is_public</strong>: allow all users to see uploaded files</li>
 </ul>
 
+<p><a href="https://docs.google.com/open?id=0B2u2KiDYT-rnZUhfTDJjVG5xdWc">PRO User guide about all shortcodes</a></p>
+
 Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
 </div>
 <br />

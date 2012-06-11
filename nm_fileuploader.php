@@ -264,6 +264,30 @@ class nmFileUploader {
 	}
 	
 	
+	/*
+	 * upload file
+	*/
+	
+	function uploadFile($username){
+	
+	
+		$upload_dir = wp_upload_dir();
+		$path_folder = $upload_dir['basedir'].'/user_uploads/'.$username.'/';
+	
+		if (!empty($_FILES)) {
+			$tempFile = $_FILES['Filedata']['tmp_name'];
+			$targetPath = $path_folder;
+			$targetFile = rtrim($targetPath,'/') . '/' . $_FILES['Filedata']['name'];
+	
+			if(move_uploaded_file($tempFile,$targetFile)){
+				echo '1';
+			}
+	
+			else{
+				echo 'Error in file uploading';
+			}
+		}
+	}
 
   
   
@@ -292,19 +316,38 @@ function load_fileuploader_script() {
 	 					array('uploadify_script'));
 	 wp_enqueue_script('fileuploader_custom_script');
 	 
-	 //fancy box
+	 $nonce= wp_create_nonce  ('fileuploader-nonce');
+	global $user_login;
+	get_currentuserinfo();
+	
+	wp_enqueue_script( 'fileuploader_ajax', plugin_dir_url( __FILE__ ) . 'js/ajax.js', array( 'jquery' ) );
+	wp_localize_script( 'fileuploader_ajax', 'fileuploader_vars', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'fileuploader_token'	=> $nonce,
+			'fileuploader_plugin_url' => plugin_dir_url( __FILE__ ),
+			'current_user'	=> $user_login
+	) );
 }    
 
 add_action('wp_enqueue_scripts', 'load_fileuploader_script');
 
 add_shortcode( 'nm-wp-file-uploader', array('nmFileUploader', 'renderUserArea'));
-
 add_action('wp_print_styles', 'nm_fileuploader_style');
 
 //edit user action
 add_action( 'edit_user_profile', array('nmFileUploader', 'nm_user_upload_admin'));
 add_action( 'show_user_profile', array('nmFileUploader', 'nm_user_upload_admin'));
 
+/*
+ * ajax action callback to upload file
+* defined in js/ajax.js
+*/
+add_action( 'wp_ajax_nopriv_fileuploader_file', 'fileuploader_post_file' );
+function fileuploader_post_file(){
+
+	nmFileUploader::uploadFile($_REQUEST['username']);
+
+	die(0);
+}
 
 /*
 * Enqueue style-file, if it exists.

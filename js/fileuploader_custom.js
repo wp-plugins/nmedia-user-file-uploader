@@ -5,35 +5,6 @@ String.prototype.trim = function() {
 }
 
 
-
-jQuery(function(){
-	
-	jQuery(".green, .red").fadeOut(7000);
-	jQuery("table#user-file tr:odd").css("background-color", "#f1f1f1");	
-});
-
-
-/*
-uploadify
-*/
-function callUploadify(pluginURL, userName)
-{
-	var user_name = "/"+userName;
-	
-	jQuery('#file_upload').uploadify({
-    'uploader'  : pluginURL + '/js/uploadify/uploadify.swf',
-    'script'    : pluginURL + '/doupload.php',
-    'cancelImg' : pluginURL + '/js/uploadify/cancel.png',
-    'folder' : 	user_name,
-    'auto'      : true,
-	'onComplete'  : function(event, ID, fileObj, response, data) {
-      //alert('There are ' + fileObj.name);
-	  jQuery("#file-name").attr("value", fileObj.name);
-	  jQuery("#upload-response").html(fileObj.name + ' loaded, Please now click \'Upload\' to upload the file').fadeIn(200);
-    }
-  });
-}
-
 /*
 validate me
 */

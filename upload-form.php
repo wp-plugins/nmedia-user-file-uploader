@@ -122,7 +122,7 @@ if(file_exists($uploads['basedir'] . '/user_uploads/'. $file -> fileName))
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/down_16.png' , __FILE__)." />";	?>
     </a>
      | 
-    <a href="javascript:confirmFirst('<?php _e($urlDelete)?>')">
+    <a href="javascript:confirmFirst('<?php echo $urlDelete?>')">
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/delete_16.png' , __FILE__)." />";	?>
     </a></td>
   </tr>
