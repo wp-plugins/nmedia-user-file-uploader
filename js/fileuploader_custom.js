@@ -17,7 +17,7 @@ function validate()
 	var file_name			= jQuery("#file-name").val();
 	var notes				= jQuery("#nm-notes").val();
 	
-	var notices 			= jQuery("#notices");
+	var notices 			= jQuery("#error");
 	notices.html('');
 	
 	var vFlag				= false;

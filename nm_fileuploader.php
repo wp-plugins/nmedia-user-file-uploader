@@ -3,7 +3,7 @@
 Plugin Name: Nmedia File Uploader Plugin
 Plugin URI: http://www.najeebmedia.com
 Description: This Plugin is developed by NajeebMedia.com
-Version: 1.8
+Version: 2.0
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
@@ -359,7 +359,11 @@ function nm_fileuploader_style() {
     wp_enqueue_style( 'fileuploader_stylesheet');
 		
 	wp_register_style('plugin_fileuploader_stylesheet', plugins_url('nm_fileuploader_style.css', __FILE__));
-    wp_enqueue_style( 'plugin_fileuploader_stylesheet');        
+    wp_enqueue_style( 'plugin_fileuploader_stylesheet');    
+
+    //loading tempalte style
+	wp_register_style('_uploader_stylesheet', plugins_url('css/styles.css', __FILE__));
+	wp_enqueue_style( '_uploader_stylesheet');
 }
 
 $options_file = dirname(__FILE__).'/file-upload-options.php';
