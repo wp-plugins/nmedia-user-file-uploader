@@ -48,7 +48,7 @@ with `File Meta`. Following four types of input field can be attached:
 	<li><strong>Checkbox</strong> - e.g: [nm-input-field type="checkbox" label="Shipping by" options="Regular, Air"]</li>
 </ul>
 
-<a href="http://www.najeebmedia.com/n-media-file-uploader-plugin-pro-demo/">View Demo</a>
+<a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">More info with Demo</a>
 
 
 == Installation ==
