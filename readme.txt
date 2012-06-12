@@ -4,32 +4,28 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
 Tested up to: 3.3
-Stable tag: 1.8
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-
-Nmedia Users File Uploader Plugin is AJAX bassed file uploader that lets your site users to upload files with Progress Bar.
-
+N-Media file uploader plugin allow site users to upload files and share with admin.
 
 == Description ==
-This plugin lets the wordpress site users to upload files and then can download. It uses flash uploader with progress bar. Users can see all uploaded files and also can download it or delete these files. All is done using a simple short code: [nm-wp-file-uploader] 
+This plugin lets the wordpress site users to upload files for admin. Each file is saved in private directory so each user can download/delete their own files after login. For more control please see PRO feature below.
 
 <h3>Features</h3>
 <ol>
 	<li>Flash Uploader</li>
 	<li>Ajax based validation</li>
-	<li>File Name</li>
 	<li>File Detail</li>
 	<li>Download Files</li>
 	<li>Delete File</li>
 	<li>Customized Upload Message, Delete Message</li>
 </ol>
 
-<a href="http://www.najeebmedia.com/n-media-file-uploader-plugin-pro-demo/">View Demo</a>
 
 <h3>Pro Features</h3>
-Pro version gives you AWSOME control over this plugin. Like Admin can upload files for Roles or for Public. Also, now you can control the plugin with shortcode parameters listed below:
+Pro version gives you AWSOME control over this plugin on top of free version. You can control file upload behavior with following shortcode
 <ul>
 	<li><strong>multi</strong>: multiple upload</li>
 	<li><strong>file_limit</strong>: control file limits</li>
@@ -41,7 +37,19 @@ Pro version gives you AWSOME control over this plugin. Like Admin can upload fil
 	<li><strong>size_limit: </strong>control file size uploaded by users</li>
 </ul>
 
-For more information please visit: <a href="http://www.najeebmedia.com/nmedia-file-uploader-v5/">Pro Version</a>
+<h3>File Meta</h3>
+File meta is another set of shortcodes allow site admin to attach unlimited input fields. These are named as `File Meta`. Admin will receive email on every file upload
+with `File Meta`. Following four types of input field can be attached:
+
+<ul>
+	<li><strong>Text</strong> - e.g: [nm-input-field type="text" label="Title"]</li>
+	<li><strong>Textarea</strong> - e.g: [nm-input-field type="textarea" label="File notes"]</li>
+	<li><strong>Select</strong> - e.g: [nm-input-field type="select" label="Select color" options="Red,Green,Blue"]</li>
+	<li><strong>Checkbox</strong> - e.g: [nm-input-field type="checkbox" label="Shipping by" options="Regular, Air"]</li>
+</ul>
+
+<a href="http://www.najeebmedia.com/n-media-file-uploader-plugin-pro-demo/">View Demo</a>
+
 
 == Installation ==
 
@@ -68,7 +76,7 @@ Yes nice progressbar with percentage
 it is because of your server side settings, sometime php.ini does not allow to upload big files. You need to check following two settings in php.ini:<br>
 1- post_max_size<br>
 2- upload_max_filesize
-
+<a href="http://www.najeebmedia.com/how-increase-file-upload-size-limit-in-wordpress/">check this tutorial</a>
 
 == Screenshots ==
 
@@ -108,7 +116,10 @@ it is because of your server side settings, sometime php.ini does not allow to u
 = 1.8 =
 * Some major security issues is being fixed, please update to this version
 
-
+= 2.0 = 
+* doupload.php and uploadify.php files have removed for best security practice
+* front end design is replced with ul/li based structure 
+* pagination control
 
 
 
@@ -141,7 +152,10 @@ Admin can see the file uploade by users
 = 1.8 =
 Some major security issues is being fixed, please update to this version
 
-
+= 2.0 = 
+doupload.php and uploadify.php files have removed for best security practice
+front end design is replced with ul/li based structure 
+pagination control
 
 
 1. It is very light plugin

@@ -8,13 +8,13 @@ Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
 
-/*ini_set('display_errors',1);
-error_reporting(E_ALL);*/
+/* ini_set('display_errors',1);
+error_reporting(E_ALL); */
 
 
 class nmFileUploader {
 	
-	var $fileupload_db_version = "1.6";
+	var $fileupload_db_version = "2.0";
 	
 	/*
 	data vars
@@ -24,12 +24,22 @@ class nmFileUploader {
 	static $file_name;
 	static $desc;
 	static $file_type;
+	static $file_size;
 	static $pathUploads;
 		
 	
 	static $tblName = 'userfiles';
 	
+	static $short_name = 'nm_file_uploader_pro';
 	
+	/*
+	 ** pagination vars
+	*/
+	
+	static $uploader_row_count;
+	static $files_per_page = 5;
+	static $total_pages;
+	static $total_files;
 	
 	/**
 	* constructor
@@ -115,6 +125,7 @@ class nmFileUploader {
 				`userID` INT( 7 ) NOT NULL ,
 				`fileTitle` VARCHAR( 250 ) NULL ,
 				`fileName` VARCHAR( 250 ) NULL ,
+				`fileSize` INT( 15 ) NULL ,
 				`fileDescription` MEDIUMTEXT NULL ,
 				`fileType` VARCHAR( 15 ) NULL ,
 				`fileUploadedOn` DATETIME NOT NULL )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
@@ -150,14 +161,26 @@ class nmFileUploader {
   
 	public function saveFile()
 	{
-		global $user_ID;
-		global $wpdb;
+		global $current_user, $wpdb;
+		get_currentuserinfo();
 		
-		$dt = array(	'fileTitle'			=> nmFileUploader::$title,
-						'fileName'			=> nmFileUploader::$file_name,
+		$user_name = '';
+		$user_id = '';
+		if(is_user_logged_in())
+		{
+			$user_name = $current_user -> user_nicename;
+			$user_id = $current_user -> ID;
+		}
+		
+		$upload_dir = wp_upload_dir();
+		$filePath = $upload_dir['basedir'].'/user_uploads/'.$user_name.'/';
+		
+		
+		$dt = array(	'fileName'			=> nmFileUploader::$file_name,
 						'fileDescription'	=> nmFileUploader::$desc,
-						'userID'			=> $user_ID,
+						'userID'			=> $user_id,
 						'fileType'			=> nmFileUploader::$file_type,
+						'fileSize'			=> filesize($filePath),
 						'fileUploadedOn'	=> current_time('mysql')
 					 );
 					 
@@ -165,7 +188,8 @@ class nmFileUploader {
 		//var_dump($dt);
 		
 		$wpdb -> insert($wpdb->prefix . nmFileUploader::$tblName,
-						$dt		
+						$dt, 
+				array('%s', '%s', '%d', '%s', '%d', '%s')		
 						);
 		
 		if($wpdb->insert_id)
@@ -288,7 +312,119 @@ class nmFileUploader {
 			}
 		}
 	}
-
+	
+	/*
+	 ** making file name with URL
+	*/
+	function makeFileDownloadable($files, $filesize, $user_dir='', $date)
+	{
+		$arrFiles = explode(',', $files);
+		$uploads = wp_upload_dir();
+	
+		$html = '';
+		foreach($arrFiles as $f)
+		{
+			if(!file_exists($uploads['basedir'] . '/user_uploads/'. $f))
+					$urlDownload = $uploads['baseurl'] . '/user_uploads/'.$user_dir.'/' . $f;
+				else
+					$urlDownload = $uploads['baseurl'] . '/user_uploads/'. $f;
+			
+			$html .= '<a href="'.$urlDownload.'" title="'.$f.'" class="nm-link-title" target="_blank">'.$f.' ('.nmFileUploader::sizeInKB($filesize).')</a>';
+		}
+	
+		$html .= ' - <span class="nm-file-meta-more">'.nmFileUploader::time_difference($date).'</span>';
+			
+		return $html;
+	}
+	
+	
+	/*
+	 * getting size in KBs
+	 */
+	function sizeInKB($size)
+	{
+		return round($size / 1024, 2) .' KiB';
+	}
+	
+	
+	/*
+	 * time elapsed
+	 */
+	
+	function time_difference($date)
+	{
+		if(empty($date)) {
+			return "No date provided";
+		}
+	
+		$periods         = array("second", "minute", "hour", "day", "week", "month", "year", "decade");
+		$lengths         = array("60","60","24","7","4.35","12","10");
+	
+		$now             = time();
+		$unix_date         = strtotime($date);
+	
+		// check validity of date
+		if(empty($unix_date)) {
+			return "Bad date";
+		}
+	
+		// is it future date or past date
+		if($now > $unix_date) {
+			$difference     = $now - $unix_date;
+			$tense         = "ago";
+	
+		} else {
+			$difference     = $unix_date - $now;
+			$tense         = "from now";
+		}
+	
+		for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
+			$difference /= $lengths[$j];
+		}
+	
+		$difference = round($difference);
+	
+		if($difference != 1) {
+			$periods[$j].= "s";
+		}
+	
+		return "$difference $periods[$j] {$tense}";
+	}
+	
+	/*
+	 ** to fix url re-occuring, written by Naseer sb
+	*/
+	
+	function fixRequestURI($vars){
+		$uri = str_replace( '%7E', '~', $_SERVER['REQUEST_URI']);
+		$parts = explode("?", $uri);
+	
+		$qsArr = array();
+		if(isset($parts[1])){	////// query string present explode it
+			$qsStr = explode("&", $parts[1]);
+			foreach($qsStr as $qv){
+				$p = explode("=",$qv);
+				$qsArr[$p[0]] = $p[1];
+			}
+		}
+	
+		//////// updatig query string
+		foreach($vars as $key=>$val){
+			if($val==NULL) unset($qsArr[$key]); else $qsArr[$key]=$val;
+		}
+	
+		////// rejoin query string
+		$qsStr="";
+		foreach($qsArr as $key=>$val){
+			$qsStr.=$key."=".$val."&";
+		}
+		if($qsStr!="") $qsStr=substr($qsStr,0,strlen($qsStr)-1);
+		$uri = $parts[0];
+		if($qsStr!="") $uri.="?".$qsStr;
+		return $uri;
+	}
+	
+	
   
   
 }
@@ -317,14 +453,12 @@ function load_fileuploader_script() {
 	 wp_enqueue_script('fileuploader_custom_script');
 	 
 	 $nonce= wp_create_nonce  ('fileuploader-nonce');
-	global $user_login;
-	get_currentuserinfo();
 	
 	wp_enqueue_script( 'fileuploader_ajax', plugin_dir_url( __FILE__ ) . 'js/ajax.js', array( 'jquery' ) );
 	wp_localize_script( 'fileuploader_ajax', 'fileuploader_vars', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ),
 			'fileuploader_token'	=> $nonce,
 			'fileuploader_plugin_url' => plugin_dir_url( __FILE__ ),
-			'current_user'	=> $user_login
+			'current_user'	=> ''
 	) );
 }    
 

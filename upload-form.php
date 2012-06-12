@@ -10,7 +10,7 @@ nmFileUploader::makeUploadDirectory();
 */
 if(isset($_GET['fid']))
 {
-	if(nmFileUploader::deleteFile($_GET['fid']))
+	if(nmFileUploader::deleteFile(intval($_GET['fid'])))
 	{
 		echo "<div class=\"red\">". get_option('nm_file_deleted_msg') ."</div>";
 	}
@@ -25,10 +25,9 @@ if(isset($_GET['fid']))
 */
 if(isset($_POST['nm-submit']))
 {
-	nmFileUploader::$title 		= '';
-	nmFileUploader::$file_name 	= $_POST['file-name'];
-	nmFileUploader::$desc		= $_POST['description'];
-	nmFileUploader::$file_type	= "." . nmFileUploader::getFileExtension($_POST['file-name']);
+	nmFileUploader::$file_name 	= sanitize_text_field($_POST['file-name']);
+	nmFileUploader::$desc		= sanitize_text_field($_POST['description']);
+	nmFileUploader::$file_type	= "." . nmFileUploader::getFileExtension(sanitize_text_field($_POST['file-name']));
 
 	if(nmFileUploader::saveFile())
 	{
@@ -82,6 +81,7 @@ if(isset($_POST['nm-submit']))
 </div>
 
 <script type="text/javascript">
+		fileuploader_vars.current_user = '<?php echo $current_user -> user_nicename?>';
 		setupUploader();
 </script>
 

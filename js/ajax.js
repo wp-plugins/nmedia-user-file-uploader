@@ -1,7 +1,10 @@
 jQuery(function() {
 
 	jQuery(".green, .red").fadeOut(7000);
-	jQuery("table#user-file tr:odd").css("background-color", "#f1f1f1");
+	jQuery("#nmuploader-container li:odd ul").css("background-color", "#f1f1f1");
+	
+	// hiding all fileuploader but only page-1
+	jQuery("ul#nmuploader-container li.nm-c-p-1").show();
 
 });
 

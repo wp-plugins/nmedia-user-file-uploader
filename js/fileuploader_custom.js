@@ -1,5 +1,9 @@
 // JavaScript Document
 
+var current_page = 1;
+var total_pages;
+var plugin_path;
+
 String.prototype.trim = function() {
     return this.replace(/^\s+|\s+$/g,"");
 }
@@ -67,6 +71,66 @@ function showDetail(id)
 {
 	jQuery(".detail-all").hide();
 	jQuery("#detail-all-"+id).fadeIn(1000);
+	
+}
+
+
+function toggleDetail(id)
+{
+	jQuery(".file-detail").hide();
+	jQuery("#file-detail-"+id).fadeToggle('fast');
+	
+}
+
+
+/* pagination */
+function loadUploaderPageNext()
+{
+	jQuery("ul#nmuploader-container li.nm-c-p-"+current_page++).hide();
+	jQuery("ul#nmuploader-container li.nm-c-p-"+current_page).show();
+	setUploaderPagination();
+}
+
+function loadUploaderPagePrev()
+{
+	jQuery("ul#nmuploader-container li.nm-c-p-"+current_page--).hide();
+	jQuery("ul#nmuploader-container li.nm-c-p-"+current_page).show();
+	setUploaderPagination();
+}
+
+
+/*function loadUploaderCurrentPage()
+{
+	
+	jQuery("ul#nmuploader-container li.nm-c-p-"+current_page).show();
+	setUploaderPagination();
+	
+}*/
+
+function setUploaderPagination()
+{
+	if(total_pages == 1)
+	{
+		jQuery("#prev-page a").hide();
+		jQuery("#next-page a").hide();
+	}
+	else if(total_pages == current_page)
+	{
+		jQuery("#next-page a").hide();
+		jQuery("#prev-page a").show();
+	}
+	else if(total_pages > current_page && current_page > 1)
+	{
+		jQuery("#prev-page a").show();
+	}
+	else
+	{
+		jQuery("#prev-page a").hide();
+		jQuery("#next-page a").show();
+	}	
+	
+	//setting page couner lable
+	jQuery("#page-count").html(current_page+" of "+total_pages);
 	
 }
 

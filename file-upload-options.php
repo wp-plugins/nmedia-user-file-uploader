@@ -15,6 +15,11 @@ array( 	"name" => __("General Settings", "nm_file_uploader_pro"),
 		"type" => "section"),	
 		array( "type" => "open"),
 		
+		array(  "name" => __("Files per Page Limit", "nm_file_uploader_pro"),
+				"desc" => __("How many Files do you want to list on a page/view", "nm_file_uploader_pro"),
+				"id" => $nmf_shortname."_file_limit",
+				"type" => "text",
+				"std"	=> 5),
 		
 		array( 	"name" => __("Sent Message", "nm_file_uploader_pro"),
 		  		"desc" => __("Type a message here, it will be shown when user will submit the file", "nm_file_uploader_pro"),
@@ -110,24 +115,6 @@ function nm_file_admin() {
 <div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:720px">
 <h2>Use following Shortcode in page</h2>
 [nm-wp-file-uploader]
-</div><br />
-<div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:720px">
-<h2>Need EXTRA Conrol Like:</h2>
-<ul style="list-style:inside">
-	<li>Admin can upload files for Roles or Public</li>
-    <li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
-    <li><strong>multi</strong>: multiple upload</li>	
-    <li><strong>file_limit</strong>: control file limits</li>
-    <li><strong>file_ext</strong>: restrict file extension</li>
-    <li><strong>allow_delete</strong>: switch on/off delete control</li>
-    <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
-    <li><strong>display_files</strong>: show/hide files</li>
-    <li><strong>is_public</strong>: allow all users to see uploaded files</li>
-</ul>
-
-<p><a href="https://docs.google.com/open?id=0B2u2KiDYT-rnZUhfTDJjVG5xdWc">PRO User guide about all shortcodes</a></p>
-
-Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
 </div>
 <br />
 <form method="post">
@@ -294,6 +281,27 @@ $i++;
 <input type="hidden" name="action" value="reset" />
 </p>
 </form>
+
+
+<div style="padding:10px; background-color:#CCC; border:#999 1px dashed; width:720px">
+<h2>Need EXTRA Conrol Like:</h2>
+<ul style="list-style:inside">
+	<li>Admin can upload files for Roles or Public</li>
+    <li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
+    <li><strong>multi</strong>: multiple upload</li>	
+    <li><strong>file_limit</strong>: control file limits</li>
+    <li><strong>file_ext</strong>: restrict file extension</li>
+    <li><strong>allow_delete</strong>: switch on/off delete control</li>
+    <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
+    <li><strong>display_files</strong>: show/hide files</li>
+    <li><strong>is_public</strong>: allow all users to see uploaded files</li>
+</ul>
+
+<p><a href="https://docs.google.com/open?id=0B2u2KiDYT-rnZUhfTDJjVG5xdWc">PRO User guide about all shortcodes</a></p>
+
+Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
+</div>
+
 <div style="font-size:9px; margin-bottom:10px;">2012 © <a href="http://www.najeebmedia.com">Nmedia</a></div>
  </div> 
 

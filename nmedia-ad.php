@@ -1,22 +1,18 @@
 <div class="nm-about-us">
 
 
-<!-- Nmedia client File Uploader Plugin -->
+<!-- Nmedia MailChimp creator -->
 <div class="box">
-<h2>Pro Features for $20.00 USD</h2>
+<h2>N-Media MailChimp Campaign Creator</h2>
 <p>
 <ul style="list-style:inside">
-	<li>Admin can upload files for Roles or Public</li>
-    <li><strong>multi</strong>: multiple upload</li>	
-    <li><strong>file_limit</strong>: control file limits</li>
-    <li><strong>file_ext</strong>: restrict file extension</li>
-    <li><strong>allow_delete</strong>: switch on/off delete control</li>
-    <li><strong>allow_upload</strong>: switch on/ff to upload files</li>
-    <li><strong>display_files</strong>: show/hide files</li>
-    <li><strong>is_public</strong>: allow all users to see uploaded files</li>
-    <li><strong>Attach unlimited form input field using simple shortcodes</strong> <a href="http://www.najeebmedia.com/nmedia-file-uplaoder-wordpress-plugin-pro-v6/">Detail</a></li>
+	<li>Create, test, send campaigns in wp</li>
+	<li>Get content from your wp post/page to create campaign in secnods</li>
+	<li>Design campaign with wp smart designer tool</li>
+	<li>Create list variables and interest groups in few clicks</li>
+	<li>Create unlimited subscription forms</li>	   
 </ul>
-<a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">How to use Shortcodes?</a>
+It is complete newsletter management application. <a href="http://www.najeebmedia.com/n-media-mailchimp-plugin/">More detail with VIDEO</a>
 </p>
 </div>
 
