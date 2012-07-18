@@ -17,7 +17,7 @@ function setupUploader() {
 			.uploadify(
 					{
 						'uploader' : fileuploader_vars.fileuploader_plugin_url
-								+ 'js/uploadify/uploadify.swf',
+								+ 'js/uploadify/uploadify.allglyphs.swf',
 						'script' : fileuploader_vars.ajaxurl,
 						'scriptData' : {
 							'action' : 'fileuploader_file',
