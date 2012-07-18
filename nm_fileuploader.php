@@ -3,7 +3,7 @@
 Plugin Name: Nmedia File Uploader Plugin
 Plugin URI: http://www.najeebmedia.com
 Description: This Plugin is developed by NajeebMedia.com
-Version: 2.0
+Version: 2.1
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
