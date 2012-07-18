@@ -3,8 +3,8 @@ Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
-Tested up to: 3.3
-Stable tag: 2.0
+Tested up to: 3.4
+Stable tag: 2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,8 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * front end design is replced with ul/li based structure 
 * pagination control
 
+= 2.1 =
+* Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
 
 
 == Upgrade Notice ==
@@ -156,6 +158,9 @@ Some major security issues is being fixed, please update to this version
 doupload.php and uploadify.php files have removed for best security practice
 front end design is replced with ul/li based structure 
 pagination control
+
+= 2.1 =
+Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
 
 
 1. It is very light plugin
