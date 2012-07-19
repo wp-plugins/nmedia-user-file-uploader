@@ -135,6 +135,23 @@ class nmFileUploader {
 	 
 	   add_option("fileupload_db_version", $fileupload_db_version);
 	}
+	
+	
+	/*
+	 * unistalling table
+	*/
+	
+	function fileuploaderUninstall(){
+	
+		global $wpdb;
+		global $fileupload_db_version;
+	
+	
+		//Delete any options thats stored also?
+		delete_option($fileupload_db_version);
+		$wpdb->query("DROP TABLE IF EXISTS ".$wpdb->prefix . nmFileUploader::$tblName);
+			
+	}
 
 
 	/*
@@ -430,6 +447,7 @@ class nmFileUploader {
 }
 
 register_activation_hook(__FILE__, array('nmFileUploader','fileuploader_install'));
+register_deactivation_hook(__FILE__, array('nmFileUploader','fileuploaderUninstall'));
 
 
 
