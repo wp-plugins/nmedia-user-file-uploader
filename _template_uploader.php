@@ -28,10 +28,8 @@ do not change until you are like me (ceo@najeebmedia.com)
 		
 
 		<form id="frm_nm_files"
-			action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])?>#download-zip"
-			method="post">
-			<input type="hidden" name="plugin_url"
-				value="<?php echo plugins_url('', __FILE__)?>" />
+			action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])?>#download-zip" method="post">
+			<input type="hidden" name="plugin_url" value="<?php echo plugins_url('', __FILE__)?>" />
 			<?php 
 			$uploader_row_count = 0;
 			foreach($arrFiles as $file):
@@ -63,20 +61,16 @@ do not change until you are like me (ceo@najeebmedia.com)
 
 
 			<li style="display: none" class="nm-c-p-<?php echo $page_number?>">
-				<ul class="nmuploader-row"
-					id="nmuploader-<?php echo $file -> fileID?>">
+				<ul class="nmuploader-row" id="nmuploader-<?php echo $file -> fileID?>">
 					
-					<li><img src="<?php echo $urlExtImage?>"
-						title="<?php echo $file -> fileName?>" />
+					<li><img src="<?php echo $urlExtImage?>" title="<?php echo $file -> fileName?>" />
 					</li>
 
-					<li class="meta"><?php echo $urlDwnld?><br /> <span
-						class="nm-file-meta-more"> <?php echo $file -> fileDescription?>
+					<li class="meta"><?php echo $urlDwnld?><br /> <span	class="nm-file-meta-more"> <?php echo $file -> fileDescription?>
 					</span>
 					</li>
 
-					<li class="tool"><a
-						href="javascript:confirmFirst('<?php echo $urlDelete?>')" title="Delete">
+					<li class="tool"><a	href="javascript:confirmFirst('<?php echo $urlDelete?>')" title="Delete">
 					 <?php	echo '<img id="del-file-'.$file -> fileID.'" border="0" src="'.plugins_url( 'images/delete_16.png' , __FILE__).'" />';	?>
 					</a>
 					</li>
