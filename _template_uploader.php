@@ -27,8 +27,7 @@ do not change until you are like me (ceo@najeebmedia.com)
 	<ul id="nmuploader-container">
 		
 
-		<form id="frm_nm_files"
-			action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])?>#download-zip" method="post">
+		<form id="frm_nm_files" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])?>#download-zip" method="post">
 			<input type="hidden" name="plugin_url" value="<?php echo plugins_url('', __FILE__)?>" />
 			<?php 
 			$uploader_row_count = 0;
