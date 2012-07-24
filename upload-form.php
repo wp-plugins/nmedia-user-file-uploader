@@ -49,6 +49,7 @@ if(isset($_POST['nm-submit']))
 
 	<span><?php _e('Select file(s) to upload, once files uploaded click on Save button below', 'nm_file_uploader_pro')?></span>
   <input id="file_upload" name="file_upload" type="file" />
+  <span id="upload-response"></span>
 </p>
 
 

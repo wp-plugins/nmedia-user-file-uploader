@@ -31,11 +31,7 @@ function setupUploader() {
 								data) {
 							// alert('There are ' + fileObj.name);
 							jQuery("#file-name").attr("value", fileObj.name);
-							jQuery("#upload-response")
-									.html(
-											fileObj.name
-													+ ' file uploaded successfully')
-									.fadeIn(200);
+							jQuery("#upload-response").html(fileObj.name + ' file uploaded successfully').fadeIn(200);
 						}
 					});
 }
