@@ -61,7 +61,7 @@ $urlUserProfile = admin_url( 'profile.php?user_id='.$file->userID.'#nm-uploaded-
 ?>
   <tr>
     <td><?= $file -> fileName?><br />
-		uploaded by: <?php echo $user_info -> user_login?> | view all files by <a href="<?php echo $urlUserProfile?>"><?php echo $user_info -> user_login?></a></td>
+		uploaded by: <?php echo $user_info -> user_nicename?> | view all files by <a href="<?php echo $urlUserProfile?>"><?php echo $user_info -> user_nicename?></a></td>
     <td><?= $file -> fileDescription?></td>
     <td width="71" align="center"><?= date('d-M,y', strtotime($file -> fileUploadedOn))?></td>
     <td width="97" align="center">
