@@ -55,7 +55,7 @@ $uploads = wp_upload_dir();
 if(file_exists($uploads['basedir'] . '/user_uploads/'. $file -> fileName))
 	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'. $file -> fileName;
 else
-  	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$user_info -> user_login.'/' . $file -> fileName;
+  	$urlDwnld = $uploads['baseurl'] . '/user_uploads/'.$user_info -> user_nicename.'/' . $file -> fileName;
 
 $urlUserProfile = admin_url( 'profile.php?user_id='.$file->userID.'#nm-uploaded-files' );
 ?>
