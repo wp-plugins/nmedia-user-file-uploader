@@ -120,7 +120,7 @@ class nmFileUploader {
 	
 		$table_name = $wpdb->prefix . nmFileUploader::$tblName;
 		  
-		$sql = "CREATE TABLE `$table_name` 
+		/* $sql = "CREATE TABLE `$table_name` 
 				(`fileID` INT( 9 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 				`userID` INT( 7 ) NOT NULL ,
 				`fileTitle` VARCHAR( 250 ) NULL ,
@@ -128,7 +128,20 @@ class nmFileUploader {
 				`fileSize` INT( 15 ) NULL ,
 				`fileDescription` MEDIUMTEXT NULL ,
 				`fileType` VARCHAR( 15 ) NULL ,
-				`fileUploadedOn` DATETIME NOT NULL )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
+				`fileUploadedOn` DATETIME NOT NULL )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;"; */
+		
+		$sql = "CREATE TABLE `$table_name`
+		(`fileID` INT( 9 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+		`userID` INT( 7 ) NOT NULL ,
+		`fileTitle` VARCHAR( 250 ) NULL ,
+		`fileName` VARCHAR( 250 ) NULL ,
+		`fileSize` INT(12) NULL ,
+		`fileType` VARCHAR( 15 ) NULL ,
+		`fileFor` INT( 5 ) NULL ,
+		`userRole` VARCHAR(200) NULL,
+		`bucketName` 		VARCHAR( 250 ) 	NULL ,
+		`fileMeta` VARCHAR(500) NULL,
+		`fileUploadedOn` DATETIME NOT NULL )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
 	
 	   require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 	   dbDelta($sql);
