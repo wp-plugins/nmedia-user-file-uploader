@@ -13,25 +13,28 @@ function setupUploader() {
 	 * uploadify version 2.1.4
 	 */
 
-	jQuery('#file_upload')
-			.uploadify(
+	jQuery('#file_upload').uploadify(
 					{
-						'uploader' : fileuploader_vars.fileuploader_plugin_url
-								+ 'js/uploadify/uploadify.allglyphs.swf',
-						'script' : fileuploader_vars.ajaxurl,
-						'scriptData' : {
+						'swf' : fileuploader_vars.fileuploader_plugin_url
+								+ 'js/uploadify-v-3-1-1/uploadify.swf',
+						//'uploader' : fileuploader_vars.fileuploader_plugin_url+'/uploadify.php',
+						'uploader' : fileuploader_vars.ajaxurl,
+						'formData' : {
 							'action' : 'fileuploader_file',
 							'username' : fileuploader_vars.current_user
 						},
-						'cancelImg' : fileuploader_vars.fileuploader_plugin_url
-								+ 'js/uploadify/cancel.png',
 						'auto' : true,
 						'buttonText' : fileuploader_vars.buttonText,
-						'onComplete' : function(event, ID, fileObj, response,
-								data) {
-							// alert('There are ' + fileObj.name);
+						'onUploadComplete' : function(fileObj) {
+							alert('There are ' + fileObj.name);
 							jQuery("#file-name").attr("value", fileObj.name);
 							jQuery("#upload-response").html(fileObj.name + ' file uploaded successfully').fadeIn(200);
-						}
+						},
+						'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+				            alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
+				        },
+				        'onUploadSuccess' : function(file, data, response) {
+				            alert('The file ' + file.name + ' was successfully uploaded with a response of ' + response + ':' + data);
+				        }
 					});
 }

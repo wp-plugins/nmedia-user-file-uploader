@@ -3,7 +3,7 @@
 Plugin Name: Nmedia File Uploader Plugin
 Plugin URI: http://www.najeebmedia.com
 Description: This Plugin is developed by NajeebMedia.com
-Version: 2.1
+Version: 3.0
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 */
@@ -453,16 +453,10 @@ register_deactivation_hook(__FILE__, array('nmFileUploader','fileuploaderUninsta
 
 
 function load_fileuploader_script() {
-	/*wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', plugins_url('js/jquery-1.4.4.min.js', __FILE__));
-	wp_enqueue_script( 'jquery' );*/
 	
 	wp_enqueue_script("jquery");
 	
-	wp_register_script('swfobject_script', plugins_url('js/uploadify/swfobject.js', __FILE__));
-	wp_enqueue_script('swfobject_script');
-	
-	wp_register_script('uploadify_script', plugins_url('js/uploadify/jquery.uploadify.v2.1.4.min.js', __FILE__));
+	wp_register_script('uploadify_script', plugins_url('js/uploadify-v-3-1-1/jquery.uploadify-3.1.min.js', __FILE__));
 	wp_enqueue_script('uploadify_script');
 	
 	
@@ -496,6 +490,7 @@ add_action( 'show_user_profile', array('nmFileUploader', 'nm_user_upload_admin')
 add_action( 'wp_ajax_nopriv_fileuploader_file', 'fileuploader_post_file' );
 function fileuploader_post_file(){
 
+	print_r($_REQUEST);
 	nmFileUploader::uploadFile($_REQUEST['username']);
 
 	die(0);
@@ -507,7 +502,7 @@ function fileuploader_post_file(){
 
 function nm_fileuploader_style() {
 	//uploadify css
-	wp_register_style('fileuploader_stylesheet', plugins_url('js/uploadify/uploadify.css', __FILE__));
+	wp_register_style('fileuploader_stylesheet', plugins_url('js/uploadify-v-3-1-1/uploadify.css', __FILE__));
     wp_enqueue_style( 'fileuploader_stylesheet');
 		
 	wp_register_style('plugin_fileuploader_stylesheet', plugins_url('nm_fileuploader_style.css', __FILE__));
