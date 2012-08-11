@@ -44,6 +44,7 @@ if(isset($_POST['nm-submit']))
 <form action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI'])?>" method="post" onSubmit="return validate()">
 <input type="hidden" name="file-name" id="file-name">
 
+<a href="javascript:sendTestPost()">Post it</a>
 
 <p class="nm-uploader-area">
 

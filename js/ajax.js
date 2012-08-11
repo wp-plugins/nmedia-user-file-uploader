@@ -38,3 +38,12 @@ function setupUploader() {
 				        }
 					});
 }
+
+
+function sendTestPost(){
+	
+	jQuery.post(fileuploader_vars.ajaxurl, {action: 'fileuploader_file', d: 'test', d2: 'Test2'}, function(resp){
+		
+		alert(resp);
+	});
+}
