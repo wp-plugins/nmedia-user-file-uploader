@@ -506,6 +506,7 @@ add_action( 'show_user_profile', array('nmFileUploader', 'nm_user_upload_admin')
  * ajax action callback to upload file
 * defined in js/ajax.js
 */
+add_action( 'wp_ajax_fileuploader_file', 'fileuploader_post_file' );
 add_action( 'wp_ajax_nopriv_fileuploader_file', 'fileuploader_post_file' );
 function fileuploader_post_file(){
 
