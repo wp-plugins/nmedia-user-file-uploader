@@ -65,7 +65,7 @@ do not change until you are like me (ceo@najeebmedia.com)
 					<li><img src="<?php echo $urlExtImage?>" title="<?php echo $file -> fileName?>" />
 					</li>
 
-					<li class="meta"><?php echo $urlDwnld?><br /> <span	class="nm-file-meta-more"> <?php echo $file -> fileDescription?>
+					<li class="meta"><?php echo $urlDwnld?><br /> <span	class="nm-file-meta-more"> <?php echo stripcslashes($file -> fileDescription)?>
 					</span>
 					</li>
 

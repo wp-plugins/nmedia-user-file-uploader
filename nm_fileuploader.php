@@ -204,7 +204,7 @@ class nmFileUploader {
 		}
 		
 		$upload_dir = wp_upload_dir();
-		$filePath = $upload_dir['basedir'].'/user_uploads/'.$user_name.'/';
+		$filePath = $upload_dir['basedir'].'/user_uploads/'.$user_name.'/'.nmFileUploader::$file_name;
 		
 		
 		$dt = array(	'fileName'			=> nmFileUploader::$file_name,
