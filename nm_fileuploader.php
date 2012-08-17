@@ -134,6 +134,7 @@ class nmFileUploader {
 		(`fileID` INT( 9 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 		`userID` INT( 7 ) NOT NULL ,
 		`fileTitle` VARCHAR( 250 ) NULL ,
+		`fileDescription` MEDIUMTEXT NULL ,
 		`fileName` VARCHAR( 250 ) NULL ,
 		`fileSize` INT(12) NULL ,
 		`fileType` VARCHAR( 15 ) NULL ,
