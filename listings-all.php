@@ -60,16 +60,16 @@ else
 $urlUserProfile = admin_url( 'profile.php?user_id='.$file->userID.'#nm-uploaded-files' );
 ?>
   <tr>
-    <td><?= $file -> fileName?><br />
+    <td><?php echo $file -> fileName?><br />
 		uploaded by: <?php echo $user_info -> user_nicename?> | view all files by <a href="<?php echo $urlUserProfile?>"><?php echo $user_info -> user_nicename?></a></td>
-    <td><?= $file -> fileDescription?></td>
-    <td width="71" align="center"><?= date('d-M,y', strtotime($file -> fileUploadedOn))?></td>
+    <td><?php echo $file -> fileDescription?></td>
+    <td width="71" align="center"><?php echo date('d-M,y', strtotime($file -> fileUploadedOn))?></td>
     <td width="97" align="center">
-    <a href="<?= $urlDwnld?>">
+    <a href="<?php echo $urlDwnld?>">
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/down_16.png' , __FILE__)." />";	?>
     </a>
      | 
-    <a href="javascript:confirmFirst('<?= $urlDelete?>')">
+    <a href="javascript:confirmFirst('<?php echo $urlDelete?>')">
 	<?php echo "<img border=\"0\" src=".plugins_url( 'images/delete_16.png' , __FILE__)." />";	?>
     </a></td>
   </tr>
