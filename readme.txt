@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
 Tested up to: 3.4
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,7 @@ This plugin lets the wordpress site users to upload files for admin. Each file i
 <h3>Pro Features</h3>
 Pro version gives you AWSOME control over this plugin on top of free version. You can control file upload behavior with following shortcode
 <ul>
+	<li><strong>HTML-5</strong>: based file upload script (iPhone/iPad supported)</li>
 	<li><strong>multi</strong>: multiple upload</li>
 	<li><strong>file_limit</strong>: control file limits</li>
 	<li><strong>file_ext</strong>: restrict file extension</li>
@@ -123,7 +124,8 @@ it is because of your server side settings, sometime php.ini does not allow to u
 
 = 2.1 =
 * Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
-
+= 2.2 =
+* Some design changes have been made to make it more user friendly
 
 == Upgrade Notice ==
 
@@ -161,6 +163,9 @@ pagination control
 
 = 2.1 =
 Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+
+= 2.2 =
+Some design changes have been made to make it more user friendly
 
 
 1. It is very light plugin

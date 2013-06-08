@@ -299,7 +299,7 @@ $i++;
 
 <p><a href="https://docs.google.com/open?id=0B2u2KiDYT-rnZUhfTDJjVG5xdWc">PRO User guide about all shortcodes</a></p>
 
-Get PRO Version for Just $20.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
+Get PRO Version for Just $30.00 USD. <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Detail and Purchase Here</a>
 </div>
 
 <div style="font-size:9px; margin-bottom:10px;">2012 © <a href="http://www.najeebmedia.com">Nmedia</a></div>
