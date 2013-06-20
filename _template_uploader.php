@@ -9,9 +9,12 @@ do not change until you are like me (ceo@najeebmedia.com)
 	plugin_path = '<?php echo dirname(__FILE__)?>';
 </script>
 <div id="nmuploader-wrapper">
-	<h2 class="nm-list-header">
-		<?php _e('Uploaded Files', nmFileUploader::$short_name)?>
+	<h2>
+		<?php _e('Download file(s)', nmFileUploader::$short_name)?>
 	</h2>
+	<p style="font-style: italic">
+		<?php _e('(click on file name to download)', nmFileUploader::$short_name)?>
+	</p>
 
 	<?php
 	$arrFiles = nmFileUploader::getUserFiles();
