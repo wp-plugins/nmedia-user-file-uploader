@@ -3,8 +3,8 @@ Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.2.1
-Tested up to: 3.4
-Stable tag: 2.2
+Tested up to: 3.5.1
+Stable tag: 2.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 === Nmedia Users File Uploader Plugin ===
@@ -131,7 +131,7 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * pagination control
 
 = 2.1 =
-* Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+* Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
 
 
 == Upgrade Notice ==
@@ -169,7 +169,7 @@ front end design is replced with ul/li based structure
 pagination control
 
 = 2.1 =
-Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
 
 
 1. It is very light plugin
@@ -290,8 +290,8 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * pagination control
 
 = 2.1 =
-* Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
-= 2.2 =
+* Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
+= 2.3 =
 * Some design changes have been made to make it more user friendly
 
 == Upgrade Notice ==
@@ -329,9 +329,9 @@ front end design is replced with ul/li based structure
 pagination control
 
 = 2.1 =
-Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
 
-= 2.2 =
+= 2.3 =
 Some design changes have been made to make it more user friendly
 
 
