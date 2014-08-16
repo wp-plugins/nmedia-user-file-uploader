@@ -1,7 +1,7 @@
 === WP file upload and manager by N-Media ===
 Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
-Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
+Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
 Tested up to: 3.9
 Stable tag: 3.0
