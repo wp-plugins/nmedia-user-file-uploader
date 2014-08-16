@@ -1,10 +1,10 @@
-=== Nmedia Users File Uploader Plugin ===
+=== WP file upload and manager by N-Media ===
 Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
 Tags: File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
-Requires at least: 3.2.1
-Tested up to: 3.4
-Stable tag: 2.1
+Requires at least: 3.5
+Tested up to: 3.9
+Stable tag: 3.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,39 +13,49 @@ N-Media file uploader plugin allow site users to upload files and share with adm
 == Description ==
 This plugin lets the wordpress site users to upload files for admin. Each file is saved in private directory so each user can download/delete their own files after login. For more control please see PRO feature below.
 
+<h4>NOTE: Version 3.0 has major changes, but we have included a migration script which will copy all old files in new version</h4>
 <h3>Features</h3>
 <ol>
-	<li>Flash Uploader</li>
-	<li>Ajax based validation</li>
-	<li>File Detail</li>
-	<li>Download Files</li>
-	<li>Delete File</li>
-	<li>Customized Upload Message, Delete Message</li>
+	<li><span style="line-height: 13px;">Upload button title</span></li>
+	<li><span style="line-height: 13px;">Upload button font color</span></li>
+	<li>Upload button background color</li>
+	<li>Max filesize (each file)</li>
+	<li>Max files limit = 5</li>
+	<li>Upload background color change</li>
+	<li>Message control on success and error</li>
+	<li>Image thumb</li>
 </ol>
 
 
 <h3>Pro Features</h3>
 Pro version gives you AWSOME control over this plugin on top of free version. You can control file upload behavior with following shortcode
 <ul>
-	<li><strong>multi</strong>: multiple upload</li>
-	<li><strong>file_limit</strong>: control file limits</li>
-	<li><strong>file_ext</strong>: restrict file extension</li>
-	<li><strong>allow_delete</strong>: switch on/off delete control</li>
-	<li><strong>allow_upload</strong>: switch on/ff to upload files</li>
-	<li><strong>display_files</strong>: show/hide files</li>
-	<li><strong>is_public:</strong> allow all users to see uploaded files</li>
-	<li><strong>size_limit: </strong>control file size uploaded by users</li>
+	<li>Min files limit</li>
+	<li>Max file upload limit set</li>
+	<li>Secure download link</li>
+	<li>Admin email notification/alert</li>
+	<li>Share file (user can send file in email)</li>
+	<li>File meta attachment (Awesome feature)</li>
+	<li>File sorting, searching, pagination</li>
+	<li>Admin: disable/enable upload/download section</li>
+	<li>Admin: Allow users to upload files even not registered (public)</li>
 </ul>
 
 <h3>File Meta</h3>
 File meta is another set of shortcodes allow site admin to attach unlimited input fields. These are named as `File Meta`. Admin will receive email on every file upload
-with `File Meta`. Following four types of input field can be attached:
+with `File Meta`. Following 8 types of input field can be attached:
 
 <ul>
-	<li><strong>Text</strong> - e.g: [nm-input-field type="text" label="Title"]</li>
-	<li><strong>Textarea</strong> - e.g: [nm-input-field type="textarea" label="File notes"]</li>
-	<li><strong>Select</strong> - e.g: [nm-input-field type="select" label="Select color" options="Red,Green,Blue"]</li>
-	<li><strong>Checkbox</strong> - e.g: [nm-input-field type="checkbox" label="Shipping by" options="Regular, Air"]</li>
+	<li><strong>Text</strong></li>
+	<li><strong>Textarea</strong>]</li>
+	<li><strong>Select</strong></li>
+	<li><strong>Checkbox</strong></li>
+	<li><strong>Mask (customized format)</strong></li>
+	<li><strong>Email</strong></li>
+	<li><strong>Date (datepicker)</strong></li>
+	<li><strong>Image</strong></li>
+	<li><strong>Checkbox</strong></li>
+	
 </ul>
 
 <a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">More info with Demo</a>
@@ -64,9 +74,7 @@ with `File Meta`. Following four types of input field can be attached:
 Yes you can.
 
 = Can I see its working Demo? =
-Yes, http://www.najeebmedia.com/nmedia-file-uploader-plugin/<br>
-username: test<br>
-password: password
+Yes, http://www.najeebmedia.com/n-media-file-uploader-plugin-pro-demo/
 
 
 = Does this uploader will show progressbar =
@@ -82,8 +90,7 @@ it is because of your server side settings, sometime php.ini does not allow to u
 
 1. Option settings under `NM FileUploader` menu
 2. using short code in page
-3. Front end view
-4. Admin area for user uploaded files
+3. Admin area for user uploaded files
 
 == Changelog ==
 
@@ -122,8 +129,13 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * pagination control
 
 = 2.1 =
-* Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+* Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
 
+= 3.0 =
+* developed on new plugin framework which is more efficient
+* better upload script using PlUpload
+* listing uploaded files with Data Table
+* showing images thumbs
 
 == Upgrade Notice ==
 
@@ -160,8 +172,10 @@ front end design is replced with ul/li based structure
 pagination control
 
 = 2.1 =
-Some latin characters like ö, ä, ü etc were not rendered in file upload button, it is fixed now.
+Some latin characters like ï¿½, ï¿½, ï¿½ etc were not rendered in file upload button, it is fixed now.
 
+= 3.0 =
+this version has major updates. It's not using userfiles table. But we included a migration script which will copy old files into new custom post types. Although some data may be lost.
 
 1. It is very light plugin
 2. We are working on more plugins to get our users more excited.
