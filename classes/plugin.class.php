@@ -5,7 +5,7 @@
 
 
 /* ======= the model main class =========== */
-if (! class_exists ( 'NM_Framwork_V1_nmcontact' )) {
+if (! class_exists ( 'NM_Framwork_V1_filemanager' )) {
 	$_framework = dirname ( __FILE__ ) . DIRECTORY_SEPARATOR . 'nm-framework.php';
 	if (file_exists ( $_framework ))
 		include_once ($_framework);
