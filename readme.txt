@@ -4,14 +4,14 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 3.0
+Stable tag: 3.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 N-Media file uploader plugin allow site users to upload files and share with admin.
 
 == Description ==
-This plugin lets the wordpress site users to upload files for admin. Each file is saved in private directory so each user can download/delete their own files after login. For more control please see PRO feature below. Use shortcode: <strong>[nm-wp-file-uploader]</strong>
+This plugin lets the wordpress site users to upload files for admin. Each file is saved in private directory so each user can download/delete their own files after login. For more control please see PRO feature below. Use folowing shortcode:: <strong>[nm-wp-file-uploader]</strong>
 
 <h4>NOTE: Version 3.0 has major changes, but we have included a migration script which will copy all old files in new version</h4>
 <h3>Features</h3>
@@ -135,6 +135,9 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * better upload script using PlUpload
 * listing uploaded files with Data Table
 * showing images thumbs
+
+= 3.1 =
+* plugin option menu was replacing appearance menu. Fixed now
 
 == Upgrade Notice ==
 
