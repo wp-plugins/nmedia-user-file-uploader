@@ -1,7 +1,7 @@
 <?php 
 
 /*
- Plugin Name: N-Media File Upload and Manager Version 8
+ Plugin Name: N-Media File Upload and Manager Version 3.0
 Plugin URI: http://www.najeebmedia.com
 Description: This plugin is front-end file uploader and manager which allow users to upload and manage files and admin can watch all these files with full control over.
 Version: 3.0
