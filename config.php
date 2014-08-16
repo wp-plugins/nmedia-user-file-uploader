@@ -16,7 +16,7 @@ $plugin_meta		= array('name'			=> 'FileManager',
 							'url'			=> plugins_url( $plugin_dir , dirname(__FILE__) ),
 							'db_version'	=> 3.0,
 							'logo'			=> plugins_url( $plugin_dir.'/images/logo.png' , dirname(__FILE__) ),
-							'menu_position'	=> 60);
+							'menu_position'	=> 73);
 
 
 function get_plugin_meta_filemanager(){

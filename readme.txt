@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 3.0
+Stable tag: 3.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,9 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * better upload script using PlUpload
 * listing uploaded files with Data Table
 * showing images thumbs
+
+= 3.1 =
+* plugin option menu was replacing appearance menu. Fixed now
 
 == Upgrade Notice ==
 

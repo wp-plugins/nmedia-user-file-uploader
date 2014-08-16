@@ -82,58 +82,12 @@ $meatGeneral = array('thumb-size'	=> array(	'label'		=> __('Images thumb size', 
 					);
 					
 
-$meat_pro_features = array('min-files'	=> array(  'label'		=> __('Min. files allowed to upload', 'nm-filemanager'),
-												   'desc'		=> __('Enter min. files in numbers. Leave blank for disable this.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_min_files',
-												   'type'		=> 'text',
-												   'default'	=> '',
-												   'help'		=> __('like: 2', 'nm-filemanager')
-												),
-						   'admin-email'=> array(  'label'		=> __('Send email to admin?', 'nm-filemanager'),
-												   'desc'		=> __('Please check if you want to send email notification to admin.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_admin_email',
-												   'type'		=> 'checkbox',
-												   'default'	=> '',
-												   'options'	=> array('yes'	=> 'Yes'),
-												   'help'		=> ''
-												),												
-						   'upload-area'=> array(  'label'		=> __('Hide upload section?', 'nm-filemanager'),
-												   'desc'		=> __('Please check if you want to hide upload section.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_upload_area',
-												   'type'		=> 'checkbox',
-												   'default'	=> '',
-												   'options'	=> array('yes'	=> 'Hide'),
-												   'help'		=> ''
-												),												
-						   'download-area'=> array(  'label'	=> __('Hide file list section?', 'nm-filemanager'),
-												   'desc'		=> __('Please check if you want to hide uploaded file section.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_download_area',
-												   'type'		=> 'checkbox',
-												   'default'	=> '',
-												   'options'	=> array('yes'	=> 'Hide'),
-												   'help'		=> ''
-												),												
-						   'allow-public'=> array(  'label'	=> __('Allow public file upload?', 'nm-filemanager'),
-												   'desc'		=> __('Please check if you want to allow public (non logged in users) to upload files.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_allow_public',
-												   'type'		=> 'checkbox',
-												   'default'	=> '',
-												   'options'	=> array('yes'	=> 'Yes'),
-												   'help'		=> ''
-												),									
-						   'public-user'=> array(  'label'	=> __('User ID for public file upload', 'nm-filemanager'),
-												   'desc'		=> __('Enter the user id under which public files will be upload.', 'nm-filemanager'),
-				  		   						   'id'			=> 'nm_filemanager'.'_public_user',
-												   'type'		=> 'text',
-												   'default'	=> '',
-												   'help'		=> __('Type userID like: <strong>1</strong>', 'nm-filemanager')
-												),												
-);
 
-$meat_file_meta = array('file-meta'	=> array(	
+
+$meat_pro_features = array('file-meta'	=> array(	
 									'desc'		=> $proFeatures,
 									'type'		=> 'file',
-									'id'		=> 'file-meta.php',
+									'id'		=> 'get-pro.php',
 									),
 								);
 
@@ -142,6 +96,12 @@ $this -> the_options = array('general-settings'	=> array(	'name'		=> __('Basic S
 															'type'	=> 'tab',
 															'desc'	=> __('Set options as per your need', 'nm-filemanager'),
 															'meat'	=> $meatGeneral,
+														
+														),
+								'get-pro'		=> array(	'name'		=> __('Pro Features', 'nm-filemanager'),
+															'type'	=> 'tab',
+															'desc'	=> __('Get PRO version and enjoy following features', 'nm-filemanager'),
+															'meat'	=> $meat_pro_features,
 														
 														),
 	
