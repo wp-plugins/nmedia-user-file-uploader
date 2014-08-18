@@ -69,7 +69,7 @@ global $nmfilemanager, $filemanager_runtime;
 		 */
 		 $save_button_label = ( isset($save_button_label) ? $save_button_label : 'Save');
 		 ?>
-		<a id="fileupload-button" href="javascript:jQuery('#form-save-new-file').submit();">
+		<a id="fileupload-button" href="javascript:;">
 			<?php printf( __('%s', 'nm-filemanager'), $save_button_label);?>
 		</a>
 		<p style="text-align:center;margin-top: 25px;" id="nm-saving-file"></p> 
@@ -100,6 +100,12 @@ global $nmfilemanager, $filemanager_runtime;
  
         e.preventDefault();
     });
+
+    $('#fileupload-button').on('click', function(e)  {
+    	e.preventDefault();
+    	$('#form-save-new-file').submit();
+    });
+    
 
     // file uploader script
     var $filelist_DIV = $('#filelist-uploadfile');
