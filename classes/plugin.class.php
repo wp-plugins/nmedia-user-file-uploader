@@ -121,7 +121,7 @@ class NM_WP_FileManager extends NM_Framwork_V1_filemanager {
 		 * [4] Localized object will always be your pluginshortname_vars e.g: pluginshortname_vars.ajaxurl
 		 */
 		$this->localized_vars = array (
-				'ajaxurl' 					=> admin_url ( 'admin-ajax.php' ),
+				'ajaxurl' 					=> admin_url ( 'admin-ajax.php?no_cache='.rand() ),
 				'plugin_url'				=> $this->plugin_meta ['url'],
 				'doing' 					=> $this->plugin_meta ['url'] . '/images/loading.gif',
 				'settings' 					=> $this->plugin_settings,

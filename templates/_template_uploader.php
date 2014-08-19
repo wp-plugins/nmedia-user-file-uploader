@@ -3,12 +3,15 @@
  * it is responsible to upload files
  */
  
-global $nmfilemanager, $filemanager_runtime;
-?>
+global $nmfilemanager;
 
+if( get_browser_runtimes() == 'flash' )
+	echo '<p class="no-ie-support-message">'.__('Note: IE is not recommended browser please use Firefox/Chrome/Safari instead', 'nm-filemanager').'</p>';
+?>
 
 <form id="form-save-new-file" onsubmit="return save_uploaded_files(this);" style="background-color: <?php echo $this -> get_option('_uploader_bg_color'); ?>">
   
+  	
 	<div id="nm-uploadfile" class="nm-uploader-area">
 	    <div id="container_buttons">
 	        <div class="btn_center">
@@ -83,7 +86,7 @@ global $nmfilemanager, $filemanager_runtime;
 	 ?>
 </form>
 
-<script>
+<script type="text/javascript">
 	<!--
 	var file_count_filemanager = 1;
 	var uploader_filemanager;
@@ -110,7 +113,7 @@ global $nmfilemanager, $filemanager_runtime;
     // file uploader script
     var $filelist_DIV = $('#filelist-uploadfile');
     uploader_filemanager = new plupload.Uploader({
-		runtimes 			: '<?php echo $filemanager_runtime?>',
+		runtimes 			: '<?php echo get_browser_runtimes();?>',
 		browse_button 		: 'select-button', // you can pass in id...
 		container			: 'nm-uploadfile', // ... or DOM Element itself
 		drop_element		: 'nm-uploadfile',
@@ -122,9 +125,9 @@ global $nmfilemanager, $filemanager_runtime;
 	    chunk_size: '2mb',
 		
 	    // Flash settings
-		flash_swf_url 		: '<?php echo $postfront -> plugin_meta['url']?>/js/uploader/Moxie.swf',
+		flash_swf_url 		: '<?php echo $nmfilemanager -> plugin_meta['url']?>/js/uploader/Moxie.swf?no_cache=<?php echo rand();?>',
 		// Silverlight settings
-		silverlight_xap_url : '<?php echo $postfront -> plugin_meta['url']?>/js/uploader/Moxie.xap',
+		silverlight_xap_url : '<?php echo $nmfilemanager -> plugin_meta['url']?>/js/uploader/Moxie.xap',
 		
 		filters : {
 			mime_types: [

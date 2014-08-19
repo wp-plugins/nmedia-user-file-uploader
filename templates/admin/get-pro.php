@@ -17,7 +17,7 @@ $proFeatures .= '<br>More information contact: <a href="mailto:sales@najeebmedia
 //echo $proFeatures;
 ?>
 
-<h2>Get PRO Version for only $30.00</h2>
+<h2>Get PRO Version for only $35.00</h2>
 <ul>
 	<li>Min files limit</li>
 	<li>Max file upload limit set</li>
@@ -31,22 +31,5 @@ $proFeatures .= '<br>More information contact: <a href="mailto:sales@najeebmedia
 	<li>Access to support forum</li>	
 </ul>
 
-<p>Pro version is under testing. If you want to receive alert on it's launch, please subscribe to following link and get <strong>50% discount via promo code</strong>.</p>
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="//najeebmedia.us2.list-manage.com/subscribe/post?u=8dea921597aa416ee5ec39cfc&amp;id=8d79acb2d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<label for="mce-EMAIL">Subscribe for File upload and manager plugin</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_8dea921597aa416ee5ec39cfc_8d79acb2d0" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
+<a href="http://www.najeebmedia.com/nmedia-file-uploader-pro/">Buy Now</a>
 
-<!--End mc_embed_signup-->

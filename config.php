@@ -45,14 +45,15 @@ function filemanager_pa($arr){
 }
 
 $filemanager_runtime = '';
-function if_browser_is_ie()
+function get_browser_runtimes()
 {
 	//print_r($_SERVER['HTTP_USER_AGENT']);
 
 	if(!(isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))){
-		return false;
 		$filemanager_runtime = 'html5,flash,silverlight,html4,browserplus,gear';
 	}else{
 		$filemanager_runtime = 'flash';
 	}
+	
+	return $filemanager_runtime;
 }

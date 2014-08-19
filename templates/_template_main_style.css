@@ -148,3 +148,9 @@ background: #3279BB;
 color:#fff;
 }
 /* pagination css starts*/
+
+.no-ie-support-message{
+    color: red;
+    background: #ccf;
+}
+
