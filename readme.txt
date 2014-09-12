@@ -3,7 +3,7 @@ Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: 3.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
