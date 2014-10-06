@@ -94,7 +94,7 @@ $meat_pro_features = array('file-meta'	=> array(
 
 $this -> the_options = array('general-settings'	=> array(	'name'		=> __('Basic Setting', 'nm-filemanager'),
 															'type'	=> 'tab',
-															'desc'	=> __('Set options as per your need', 'nm-filemanager'),
+															'desc'	=> __('<p>Use this shortcode any of the page: [nm-wp-file-uploader] and set following options as per your need', 'nm-filemanager'),
 															'meat'	=> $meatGeneral,
 														
 														),
