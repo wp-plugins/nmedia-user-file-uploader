@@ -1,4 +1,4 @@
-=== WP file upload and manager by N-Media ===
+=== Front end file upload and manager Plugin ===
 Contributors: nmedia
 Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
