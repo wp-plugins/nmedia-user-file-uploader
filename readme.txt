@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 3.5
+Stable tag: 3.6
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,7 +149,10 @@ it is because of your server side settings, sometime php.ini does not allow to u
 * IE not supported message will be shown if IE browser detected
 
 = 3.5 =
-BUG Fixed: Filename will will displayed after uploading for all files.
+BUG Fixed: Filename will will displayed after uploading for all files. 
+
+= 3.6 =
+* Plupload replace with new version 2.1.2
 == Upgrade Notice ==
 
 = 1.0 =
@@ -193,3 +196,6 @@ this version has major updates. It's not using userfiles table. But we included 
 1. It is very light plugin
 2. We are working on more plugins to get our users more excited.
 3. More options/controls will be given soon.
+
+= 3.6 =
+* Plupload replace with new version 2.1.2, MUST update to this version as older version of plupload have some security issues.
