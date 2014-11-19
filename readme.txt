@@ -30,6 +30,8 @@ This plugin lets the wordpress site users to upload files for admin. Each file i
 <h3>Pro Features</h3>
 Pro version gives you AWSOME control over this plugin on top of free version. You can control file upload behavior with following shortcode
 <ul>
+	<li>Create Directory</li>
+	<li>Directory Tree View (see screenshots)</li>
 	<li>Min files limit</li>
 	<li>Max file upload limit set</li>
 	<li>Secure download link</li>
@@ -90,6 +92,8 @@ it is because of your server side settings, sometime php.ini does not allow to u
 
 1. Frontend view of plgin
 2. Admin area for user uploaded files
+3. PRO Feature: Create directory
+4. PRO Feature: Directory Tree View Template
 
 == Changelog ==
 
