@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: Front end upload, File uploader, User files, User files manager, File uploaders, User Desgins uploader, Image uploader, ajax based file uploader, progress bar
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 3.7
+Stable tag: 3.8
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -206,3 +206,6 @@ this version has major updates. It's not using userfiles table. But we included 
 
 = 3.6 =
 * Plupload replace with new version 2.1.2, MUST update to this version as older version of plupload have some security issues.
+
+= 3.8 =
+* SECURITY ALERT: This version has removed a BUG related to security. Remote invalid file types are NOT allowed
