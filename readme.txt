@@ -160,6 +160,9 @@ BUG Fixed: Filename will will displayed after uploading for all files.
 
 = 3.7 =
 * No more Flash needed for IE. It's replaced with HTML5 runtime.
+
+= 3.8 =
+* SECURITY ALERT: This version has removed a BUG related to security. Remote invalid file types are NOT allowed
 == Upgrade Notice ==
 
 = 1.0 =
